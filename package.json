@@ -6,7 +6,11 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepare": "husky install",
+    "lint:code": "eslint --ext .js,.jsx",
+    "lint:code-fix": "eslint --fix --ext .js,.jsx",
+    "prettier:code-fix": "prettier --write"
   },
   "dependencies": {
     "@emotion/react": "^11.10.4",
@@ -23,7 +27,20 @@
     "eslint-config-react-app": "^7.0.1",
     "eslint-plugin-prefer-arrow": "^1.2.3",
     "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
     "vite": "^3.0.7"
+  },
+  "lint-staged": {
+    "*.json": [
+      "yarn prettier:code-fix"
+    ],
+    ".*rc": [
+      "yarn prettier:code-fix"
+    ],
+    "*.{js,jsx}": [
+      "yarn lint:code-fix --cache"
+    ]
   }
 }
