@@ -10,11 +10,17 @@ const ItemItem = ({ item }) => {
         <Styled.ItemImage src={imageUrl} alt="추천 상품" />
       </Styled.ItemImageContainer>
       <Styled.ItemName>{Name}</Styled.ItemName>
-      <p>
-        <span>{discountRate}</span>
-        2,890원
-      </p>
-      <Styled.ItemPrice>{price}원</Styled.ItemPrice>
+      {discountRate === 0 ? (
+        <Styled.ItemDiscountPrice>{price}원</Styled.ItemDiscountPrice>
+      ) : (
+        <>
+          <Styled.ItemDiscountPrice>
+            <Styled.DiscountRate>{discountRate}%</Styled.DiscountRate>
+            {(price * (100 - discountRate)) / 100}원
+          </Styled.ItemDiscountPrice>
+          <Styled.ItemPrice>{price}원</Styled.ItemPrice>
+        </>
+      )}
     </Styled.Item>
   );
 };
