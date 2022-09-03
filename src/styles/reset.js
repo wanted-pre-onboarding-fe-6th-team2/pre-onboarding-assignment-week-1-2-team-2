@@ -105,6 +105,9 @@ const resetCss = css`
   }
   body {
     line-height: 1;
+    font-size: 14px;
+    color: #333;
+    font-family: 'Noto Sans', 'malgun gothic', AppleGothic, dotum, sans-serif;
   }
   ol,
   ul {
