@@ -2,18 +2,36 @@ import * as Styled from '@/components/ProductDetail/ProductDetail.styled';
 import likeIcon from '@/assets/svg/like.svg';
 import clickedLikeIcon from '@/assets/svg/clicked-like.svg';
 import shareIcon from '@/assets/svg/share.svg';
-import { useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
+
 const ProductDetail = () => {
-  // const productMockData = {
-  //   name: 'kimchi',
-  //   description: '맛있는 김치',
-  //   origin: '강원도 홍천군',
-  //   shipping: '무료 배송',
-  //   count: 1,
-  //   price: 5000,
-  // };
   const [isLikeClicked, setIsLikeClicked] = useState(false);
+  const [isShareModalOpened, setIsShareModalOpened] = useState(false);
+  const copyModalRef = useRef([]);
   const handleClickLike = () => setIsLikeClicked(prev => !prev);
+  const handleCopyUrl = async e => {
+    await copyModalRef.current[1].select();
+    await document.execCommand('copy');
+    await e.target.focus();
+    await alert('링크가 복사되었습니다');
+    await setIsShareModalOpened(prev => !prev);
+  };
+
+  // 외부 클릭 시에도 닫히도록 하는 함수
+  const clickOutside = e => {
+    if (isShareModalOpened && !copyModalRef.current.includes(e.target)) {
+      setIsShareModalOpened(prev => !prev);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', clickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', clickOutside);
+    };
+  });
+
   return (
     <Styled.Container>
       <img
@@ -31,8 +49,22 @@ const ProductDetail = () => {
             ) : (
               <img src={likeIcon} onClick={handleClickLike} />
             )}
-            <img src={shareIcon} />
+            <img
+              ref={el => (copyModalRef.current[0] = el)}
+              src={shareIcon}
+              onClick={() => setIsShareModalOpened(prev => !prev)}
+            />
           </div>
+          {isShareModalOpened && (
+            <Styled.Modal>
+              <div>
+                <input ref={el => (copyModalRef.current[1] = el)} value={window.location.href} />
+                <button ref={el => (copyModalRef.current[2] = el)} onClick={handleCopyUrl}>
+                  URL 복사
+                </button>
+              </div>
+            </Styled.Modal>
+          )}
         </Styled.DivWrap>
         <Styled.Description>
           매일 협력 농가에서 공수해오는 신선한 잎채소로 담은 스윗밸런스의 오늘의 샐러드를 만나

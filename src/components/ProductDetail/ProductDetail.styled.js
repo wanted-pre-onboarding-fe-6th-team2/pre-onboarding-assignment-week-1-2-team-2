@@ -50,4 +50,17 @@ const DivWrap = styled.div`
     margin-right: 10px;
   }
 `;
-export { Container, Dl, Div, PriceDiv, H2, Description, DivWrap };
+
+const Modal = styled.div`
+  position: fixed;
+  height: 60px;
+  padding: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 10%;
+  top: 6%;
+  background-color: white;
+  box-shadow: 2px 2px 2px 2px rgb(181, 181, 181);
+`;
+export { Container, Dl, Div, PriceDiv, H2, Description, DivWrap, Modal };
