@@ -37,7 +37,17 @@ const H2 = styled.h2`
 `;
 
 const Description = styled.div`
-  padding: 17px 0px 18px;
+  padding: 0px 0px 18px;
+  color: rgb(181, 181, 181);
 `;
 
-export { Container, Dl, Div, PriceDiv, H2, Description };
+const DivWrap = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  img:first-of-type {
+    margin-right: 10px;
+  }
+`;
+export { Container, Dl, Div, PriceDiv, H2, Description, DivWrap };
