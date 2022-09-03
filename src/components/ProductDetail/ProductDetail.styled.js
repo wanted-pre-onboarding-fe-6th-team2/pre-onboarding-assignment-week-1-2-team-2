@@ -20,6 +20,9 @@ const Dl = styled.dl`
 
 const Div = styled.div`
   width: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 const PriceDiv = styled.div`
@@ -46,6 +49,11 @@ const DivWrap = styled.div`
   justify-content: space-between;
   align-items: center;
 
+  img,
+  button {
+    cursor: pointer;
+  }
+
   img:first-of-type {
     margin-right: 10px;
   }
@@ -63,4 +71,21 @@ const Modal = styled.div`
   background-color: white;
   box-shadow: 2px 2px 2px 2px rgb(181, 181, 181);
 `;
-export { Container, Dl, Div, PriceDiv, H2, Description, DivWrap, Modal };
+
+const ButtonGroup = styled.div`
+  display: flex;
+  button {
+    background-color: #4c9c2e;
+    border: none;
+    color: white;
+    padding: 10px 50px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+
+    &:first-of-type {
+      margin-right: 40px;
+    }
+  }
+`;
+export { Container, Dl, Div, PriceDiv, H2, Description, DivWrap, Modal, ButtonGroup };

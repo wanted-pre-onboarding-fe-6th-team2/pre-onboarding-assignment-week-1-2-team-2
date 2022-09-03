@@ -41,50 +41,54 @@ const ProductDetail = () => {
       />
 
       <Styled.Div>
-        <Styled.DivWrap>
-          <Styled.H2>오늘의 샐러드 8종 (리뉴얼)</Styled.H2>
-          <div>
-            {isLikeClicked ? (
-              <img src={clickedLikeIcon} onClick={handleClickLike} />
-            ) : (
-              <img src={likeIcon} onClick={handleClickLike} />
+        <div>
+          <Styled.DivWrap>
+            <Styled.H2>오늘의 샐러드 8종 (리뉴얼)</Styled.H2>
+            <div>
+              {isLikeClicked ? (
+                <img src={clickedLikeIcon} onClick={handleClickLike} />
+              ) : (
+                <img src={likeIcon} onClick={handleClickLike} />
+              )}
+              <img
+                ref={el => (copyModalRef.current[0] = el)}
+                src={shareIcon}
+                onClick={() => setIsShareModalOpened(prev => !prev)}
+              />
+            </div>
+            {isShareModalOpened && (
+              <Styled.Modal>
+                <div>
+                  <input ref={el => (copyModalRef.current[1] = el)} value={window.location.href} />
+                  <button ref={el => (copyModalRef.current[2] = el)} onClick={handleCopyUrl}>
+                    URL 복사
+                  </button>
+                </div>
+              </Styled.Modal>
             )}
-            <img
-              ref={el => (copyModalRef.current[0] = el)}
-              src={shareIcon}
-              onClick={() => setIsShareModalOpened(prev => !prev)}
-            />
-          </div>
-          {isShareModalOpened && (
-            <Styled.Modal>
-              <div>
-                <input ref={el => (copyModalRef.current[1] = el)} value={window.location.href} />
-                <button ref={el => (copyModalRef.current[2] = el)} onClick={handleCopyUrl}>
-                  URL 복사
-                </button>
-              </div>
-            </Styled.Modal>
-          )}
-        </Styled.DivWrap>
-        <Styled.Description>
-          매일 협력 농가에서 공수해오는 신선한 잎채소로 담은 스윗밸런스의 오늘의 샐러드를 만나
-          보세요.
-        </Styled.Description>
-        <Styled.PriceDiv>가격</Styled.PriceDiv>
-        <Styled.Dl>
-          <dt>원산지</dt>
-          <dd>강원도 홍천군</dd>
-        </Styled.Dl>
-        <Styled.Dl>
-          <dt>배송</dt>
-          <dd>무료 배송</dd>
-        </Styled.Dl>
-        <Styled.Dl>
-          <dt>상품 선택</dt>
-          <div>select 박스 칸</div>
-        </Styled.Dl>
-        <button>구매하기</button>
-        <button>장바구니</button>
+          </Styled.DivWrap>
+          <Styled.Description>
+            매일 협력 농가에서 공수해오는 신선한 잎채소로 담은 스윗밸런스의 오늘의 샐러드를 만나
+            보세요.
+          </Styled.Description>
+          <Styled.PriceDiv>6000원</Styled.PriceDiv>
+          <Styled.Dl>
+            <dt>원산지</dt>
+            <dd>강원도 홍천군</dd>
+          </Styled.Dl>
+          <Styled.Dl>
+            <dt>배송</dt>
+            <dd>무료 배송</dd>
+          </Styled.Dl>
+          <Styled.Dl>
+            <dt>상품 선택</dt>
+            <div>select 박스 칸</div>
+          </Styled.Dl>
+        </div>
+        <Styled.ButtonGroup>
+          <button>구매하기</button>
+          <button>장바구니</button>
+        </Styled.ButtonGroup>
       </Styled.Div>
     </Styled.Container>
   );
