@@ -13,4 +13,11 @@ const OrderPageHeading = styled.h2`
   font-weight: 700;
 `;
 
-export { PageContainer, OrderPageHeading };
+const FlexBox = styled.div`
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+`;
+
+export { PageContainer, OrderPageHeading, FlexBox };
