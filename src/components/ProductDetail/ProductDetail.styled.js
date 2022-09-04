@@ -4,7 +4,6 @@ const Container = styled.article`
   display: flex;
   justify-content: space-around;
   margin: 0 auto;
-  border: 1px red solid;
   width: 1050px;
 `;
 
@@ -87,6 +86,7 @@ const ButtonGroup = styled.div`
     cursor: pointer;
     font-weight: bold;
     font-size: 16px;
+    border-radius: 3px;
   }
 `;
 
@@ -114,6 +114,7 @@ const DivGroup = styled.div`
   padding: 11px 10px 11px 15px;
   font-size: 12px;
   border: 1px solid rgb(244, 244, 244);
+  margin-bottom: 11px;
 
   .close-btn {
     background-color: white;
@@ -149,6 +150,13 @@ const DivGroup = styled.div`
     }
   }
 `;
+
+const MenuItemDiv = styled.div`
+  display: flex !important;
+  justify-content: space-between !important;
+  width: 100%;
+`;
+
 export {
   Container,
   Dl,
@@ -161,4 +169,5 @@ export {
   ButtonGroup,
   SpanGroup,
   DivGroup,
+  MenuItemDiv,
 };
