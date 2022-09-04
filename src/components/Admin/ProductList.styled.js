@@ -29,13 +29,13 @@ const TableHeader = styled.div`
 `;
 
 const Table = styled.table`
+  width: 1100px;
+  font-size: 0.9rem;
   border-spacing: 0;
   border-collapse: collapse;
   border-bottom: 1px solid #e5e5e5;
-  font-size: 0.9rem;
   margin: auto;
   margin-bottom: 1rem;
-  width: 1100px;
   word-wrap: break-word;
 
   &,
@@ -43,7 +43,6 @@ const Table = styled.table`
   td {
     text-align: center;
     vertical-align: middle;
-    min-width: 120px;
     border-top: 1px solid #e5e5e5;
   }
   th {

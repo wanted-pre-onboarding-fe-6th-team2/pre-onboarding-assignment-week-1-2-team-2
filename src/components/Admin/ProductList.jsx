@@ -44,8 +44,10 @@ const ProductList = () => {
             products.map((product, idx) => (
               <tr key={product.id}>
                 <td>{idx + 1}</td>
-                <td>{product.iamgeUrl}</td>
-                <td>{product.Name}</td>
+                <td>
+                  <img src={product.imageUrl} alt={product.name} style={{ width: '100px' }} />
+                </td>
+                <td>{product.name}</td>
                 <td>
                   {product.option.map(option => (
                     <styled.OptionContainer key={option.optionId}>
