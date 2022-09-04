@@ -3,12 +3,12 @@ import SectionHeading from '@/components/order/SectionHeading/SectionHeading';
 import { useDaumPostcodePopup } from 'react-daum-postcode';
 import { useState } from 'react';
 
-const RECIPIENT_NAME = 'recipient-name';
-const RECIPIENT_PHONE_NUMBER = 'recipient-phone-number';
-const RECIPIENT_EMAIL = 'recipient-email';
+const RECIPIENT_NAME = 'recipientName';
+const RECIPIENT_PHONE_NUMBER = 'recipientPhoneNumber';
+const RECIPIENT_EMAIL = 'recipientEmail';
 
-const SHIPPING_ADDRESS = 'shipping-address';
-const SHIPPING_ADDRESS_DETAIL = 'shipping-address-detail';
+const SHIPPING_ADDRESS = 'shippingAddress';
+const SHIPPING_ADDRESS_DETAIL = 'shippingAddressDetail';
 
 const RecipientInfoFormItems = [
   { label: '수령인', id: RECIPIENT_NAME, inputType: 'text' },
@@ -19,15 +19,23 @@ const RecipientInfoFormItems = [
 const ShippingInfo = () => {
   const daumPostCodeOpen = useDaumPostcodePopup();
   const [shippingForm, setShippingForm] = useState({
-    recipient: '',
-    phoneNumber: '',
-    email: '',
-    address: '',
-    addressDetail: '',
+    [RECIPIENT_NAME]: '',
+    [RECIPIENT_PHONE_NUMBER]: '',
+    [RECIPIENT_EMAIL]: '',
+    [SHIPPING_ADDRESS]: '',
+    [SHIPPING_ADDRESS_DETAIL]: '',
   });
 
+  const handleChangeForm = ({ target }) => {
+    const { id, value } = target;
+    setShippingForm(pre => ({
+      ...pre,
+      [id]: value,
+    }));
+  };
+
   const handleOnCompleteOfDaumPost = ({ address }) => {
-    setShippingForm(pre => ({ ...pre, address }));
+    setShippingForm(pre => ({ ...pre, [SHIPPING_ADDRESS]: address }));
   };
   return (
     <Styled.ShippingInfoSection>
@@ -37,7 +45,12 @@ const ShippingInfo = () => {
           return (
             <Styled.ShippingInfoFormInputWrapper key={id}>
               <Styled.ShippingInfoLabel htmlFor={id}>{label}</Styled.ShippingInfoLabel>
-              <Styled.ShippingInfoInput type={inputType} id={id} />
+              <Styled.ShippingInfoInput
+                type={inputType}
+                id={id}
+                value={shippingForm[id]}
+                onChange={handleChangeForm}
+              />
             </Styled.ShippingInfoFormInputWrapper>
           );
         })}
@@ -46,7 +59,8 @@ const ShippingInfo = () => {
           <Styled.AddressInfoInput
             type="text"
             id={SHIPPING_ADDRESS}
-            value={shippingForm.address}
+            value={shippingForm[SHIPPING_ADDRESS]}
+            onChange={handleChangeForm}
             placeholder="기본 주소"
             disabled
           />
@@ -64,7 +78,8 @@ const ShippingInfo = () => {
           <Styled.AddressInfoInput
             type="text"
             id={SHIPPING_ADDRESS_DETAIL}
-            value={shippingForm.addressDetail}
+            value={shippingForm[SHIPPING_ADDRESS_DETAIL]}
+            onChange={handleChangeForm}
             placeholder="상세 주소"
           />
         </Styled.ShippingInfoFormInputWrapper>
