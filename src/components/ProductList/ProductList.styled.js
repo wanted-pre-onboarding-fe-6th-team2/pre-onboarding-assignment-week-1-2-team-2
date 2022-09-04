@@ -1,35 +1,13 @@
 import styled from '@emotion/styled';
 
-const ItemList = styled.ul`
+const ProductList = styled.ul`
   display: grid;
   grid-template-columns: repeat(3, 25vw);
   justify-content: center;
+  position: relative;
 
   & > div {
     grid-column: 1 / 4;
-    text-align: center;
-    margin-bottom: 3em;
-
-    & > img {
-      width: 2em;
-      height: 2em;
-      margin-bottom: 0.5em;
-    }
-
-    & > h2 {
-      font-size: 2em;
-      font-weight: bold;
-      margin-bottom: 0.25em;
-    }
-
-    & > p {
-      font-size: 0.9em;
-      margin-bottom: 0.25em;
-
-      @media all and (max-width: 768px) {
-        font-size: 0.8em;
-      }
-    }
   }
 
   @media all and (max-width: 1024px) {
@@ -45,15 +23,44 @@ const ItemList = styled.ul`
 
     & > div {
       grid-column: 1;
-
-      & > h2 {
-        font-size: 1.5em;
-      }
     }
   }
 `;
 
-const Item = styled.li`
+const StoreDescription = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5em;
+
+  & > img {
+    width: 2em;
+    height: 2em;
+  }
+
+  & > h2 {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  & > p {
+    text-align: center;
+  }
+
+  & > p:last-child {
+    /* flex-basis: 3em; */
+    margin-top: 1em;
+  }
+
+  & span {
+    font-weight: bold;
+    color: rgb(65, 143, 34);
+  }
+`;
+
+const Product = styled.li`
   width: 100%;
   height: 100%;
   margin: 0 auto;
@@ -64,13 +71,13 @@ const Item = styled.li`
   gap: 0.25em;
 `;
 
-const ItemImageContainer = styled.div`
+const ProductImageContainer = styled.div`
   width: 100%;
   height: 20em;
   overflow: hidden;
 `;
 
-const ItemImage = styled.img`
+const ProductImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -81,7 +88,7 @@ const ItemImage = styled.img`
   }
 `;
 
-const ItemName = styled.h2`
+const ProductName = styled.h2`
   width: 100%;
   margin-top: 0.5em;
   font-weight: bold;
@@ -91,19 +98,19 @@ const ItemName = styled.h2`
   white-space: nowrap;
 `;
 
-const DiscountRate = styled.span`
+const ProductDiscountRate = styled.span`
   color: red;
   font-size: 0.75em;
   font-weight: bold;
   margin-right: 0.5em;
 `;
 
-const ItemDiscountPrice = styled.p`
+const ProductDiscountPrice = styled.p`
   font-size: 1em;
   font-weight: bold;
 `;
 
-const ItemPrice = styled.p`
+const ProductPrice = styled.p`
   text-decoration: line-through;
   color: #aaa;
   font-size: 1em;
@@ -112,12 +119,13 @@ const ItemPrice = styled.p`
 `;
 
 export {
-  ItemList,
-  Item,
-  ItemImageContainer,
-  ItemImage,
-  ItemName,
-  DiscountRate,
-  ItemPrice,
-  ItemDiscountPrice,
+  ProductList,
+  StoreDescription,
+  Product,
+  ProductImageContainer,
+  ProductImage,
+  ProductName,
+  ProductDiscountRate,
+  ProductPrice,
+  ProductDiscountPrice,
 };

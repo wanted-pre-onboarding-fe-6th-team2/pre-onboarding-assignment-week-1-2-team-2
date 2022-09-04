@@ -3,32 +3,6 @@ import styled from '@emotion/styled';
 const PaginationSection = styled.section`
   width: 80%;
   margin: 0 auto;
-  position: relative;
-
-  & > p {
-    position: absolute;
-    top: 9.5em;
-    left: 3em;
-
-    & > span {
-      font-weight: bold;
-      color: rgb(65, 143, 34);
-    }
-  }
-
-  @media all and (max-width: 1024px) {
-    & > p {
-      top: 9.5em;
-      left: 3.5em;
-    }
-  }
-
-  @media all and (max-width: 768px) {
-    & > p {
-      top: 10em;
-      left: 0.5em;
-    }
-  }
 `;
 
 const PaginationButtonContainer = styled.div`

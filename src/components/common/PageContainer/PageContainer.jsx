@@ -1,5 +1,5 @@
 import React from 'react';
-import * as Styled from '@/components/PageContainer/PageContainer.styled';
+import * as Styled from '@/components/common/PageContainer/PageContainer.styled';
 
 const PageContainer = ({ children }) => {
   return (
