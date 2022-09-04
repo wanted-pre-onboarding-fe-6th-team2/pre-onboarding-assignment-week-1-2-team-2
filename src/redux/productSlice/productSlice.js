@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { initialState } from './initalState';
+import { initialState } from '@/redux/productSlice/initalState';
 
 const productSlice = createSlice({
   name: 'product',
@@ -9,7 +9,7 @@ const productSlice = createSlice({
       return [...state, payload];
     },
     delete: (state, { payload }) => {
-      const deleteId = payload;
+      const deleteId = payload.deleteId;
       const newState = state;
       const deleteIndex = newState.findIndex(product => product.id === deleteId);
 
