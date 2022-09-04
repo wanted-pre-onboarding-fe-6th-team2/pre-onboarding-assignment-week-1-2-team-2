@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ItemList from '@/components/ItemList/ItemList';
-import PaginationButton from '@/components/ItemList/Pagination/PaginationButton';
-import * as Styled from '@/components/ItemList/Pagination/Pagination.styled';
+import PaginationButton from '@/components/Pagination/PaginationButton';
+import * as Styled from '@/components/Pagination/Pagination.styled';
 
 const Pagination = ({ data }) => {
   const [currentPage, setCurrentPage] = useState(1);

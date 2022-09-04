@@ -1,5 +1,5 @@
 import React from 'react';
-import * as Styled from '@/components/ItemList/Pagination/Pagination.styled';
+import * as Styled from '@/components/Pagination/Pagination.styled';
 
 const PaginationButton = ({ itemsPerPage, totalItem, paginate }) => {
   const totalPages = Math.ceil(totalItem / itemsPerPage);

@@ -1,6 +1,7 @@
 import React from 'react';
 import img from '@/assets/images/apple.jpg';
-import Pagination from '@/components/ItemList/Pagination/Pagination';
+import Pagination from '@/components/Pagination/Pagination';
+import PageContainer from '@/components/PageContainer/PageContainer';
 
 const dummy = [
   {
@@ -228,7 +229,11 @@ const dummy = [
 const ItemList = () => {
   const filteredDummy = dummy.filter(item => item.isDisplay === true);
 
-  return <Pagination data={filteredDummy} />;
+  return (
+    <PageContainer>
+      <Pagination data={filteredDummy} />;
+    </PageContainer>
+  );
 };
 
 export default ItemList;
