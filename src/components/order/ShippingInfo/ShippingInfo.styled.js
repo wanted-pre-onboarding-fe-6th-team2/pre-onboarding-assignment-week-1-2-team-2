@@ -41,6 +41,7 @@ const AddressSearchButton = styled.button`
   padding: 10px 30px;
   border: 1px solid #ddd;
   font-weight: 500;
+  cursor: pointer;
 `;
 
 const AddressInfoInput = styled.input`

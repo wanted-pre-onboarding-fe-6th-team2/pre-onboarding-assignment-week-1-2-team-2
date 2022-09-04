@@ -37,7 +37,7 @@ const ShippingInfo = () => {
             placeholder="기본 정보"
             disabled
           />
-          <Styled.AddressSearchButton onClick={daumPostCodeOpen}>
+          <Styled.AddressSearchButton type="button" onClick={daumPostCodeOpen}>
             주소 찾기
           </Styled.AddressSearchButton>
         </Styled.ShippingInfoFormInputWrapper>
