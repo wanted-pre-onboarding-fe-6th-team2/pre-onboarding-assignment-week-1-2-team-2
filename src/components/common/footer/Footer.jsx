@@ -1,6 +1,7 @@
 import React from 'react';
-import * as Styled from '@/components/PageContainer/Footer/Footer.styled';
+import * as Styled from '@/components/common/footer/Footer.styled';
 import { Link } from 'react-router-dom';
+import { ROUTES } from '@/constants/route';
 import imgBlog from '@/assets/images/ico_blog.png';
 import imgkakao from '@/assets/images/ico_kakao.png';
 import imgInstagram from '@/assets/images/ico_instagram.png';
@@ -23,34 +24,34 @@ export default function Footer() {
         <div>
           <Styled.Fnb>
             <li>
-              <Link to="/store">FRUIT STORE</Link>
+              <Link to={ROUTES.PRODUCTLIST}>FRUIT STORE</Link>
             </li>
             <li>
-              <Link to="/orderlist">MY PAGE</Link>
+              <Link to={ROUTES.ORDERLIST}>MY PAGE</Link>
             </li>
           </Styled.Fnb>
-          <Styled.CompanyInfo>
+          <Styled.CompanyInfoUl>
             <li>상호명: Local & Life Inc. | 대표: 홍인기 | 전화번호: 010-8828-0472 </li>
             <li>사업자번호: 625-81-01879 | 통신판매허가번호: 2020-서울동대문-1110</li>
             <li>주소: 서울시 동대문구 회기로85 한국과학기술원 9호관 9402호</li>
-          </Styled.CompanyInfo>
-          <Styled.SnsArea>
+          </Styled.CompanyInfoUl>
+          <Styled.SnsAreaUl>
             <li>
-              <Link to="https://blog.naver.com/fruitte" target="_blank" rel="noopener noreferrer">
-                <img src={imgInstagram} alt="블로그"></img>
-              </Link>
+              <a href="https://www.instagram.com/fruitte_picnic/" target="_blank" rel="noreferrer">
+                <img src={imgInstagram} alt="인스타그램" />
+              </a>
             </li>
             <li>
-              <Link to="https://pf.kakao.com/_jBWkK" target="_blank" rel="noopener noreferrer">
-                <img src={imgkakao} alt="블로그"></img>
-              </Link>
+              <a href="https://pf.kakao.com/_jBWkK" target="_blank" rel="noreferrer">
+                <img src={imgkakao} alt="카카오 채팅" />
+              </a>
             </li>
             <li>
-              <Link to="https://blog.naver.com/fruitte" target="_blank" rel="noopener noreferrer">
-                <img src={imgBlog} alt="블로그"></img>
-              </Link>
+              <a href="https://blog.naver.com/fruitte" target="_blank" rel="noreferrer">
+                <img src={imgBlog} alt="블로그" />
+              </a>
             </li>
-          </Styled.SnsArea>
+          </Styled.SnsAreaUl>
         </div>
       </Styled.Inner>
       <Styled.Copyright>

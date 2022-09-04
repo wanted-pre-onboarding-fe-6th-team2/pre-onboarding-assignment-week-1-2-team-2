@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-const Header = styled.div`
+const Header = styled.header`
   position: fixed;
   top: 0;
   left: 0;
@@ -10,6 +10,7 @@ const Header = styled.div`
   box-shadow: rgb(0 0 0 / 7%) 0px 3px 4px 0px;
   background: #fff;
 `;
+
 const Inner = styled.div`
   position: relative;
   width: 1050px;
@@ -20,12 +21,14 @@ const Inner = styled.div`
   justify-content: space-between;
   align-items: center;
 `;
+
 const Logo = styled.div`
   width: 150px;
   img {
     max-width: 100%;
   }
 `;
+
 const Gnb = styled.ul`
   display: flex;
   li {

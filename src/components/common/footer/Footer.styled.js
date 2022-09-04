@@ -1,12 +1,13 @@
 import styled from '@emotion/styled';
 
-const Footer = styled.div`
+const Footer = styled.footer`
   position: relative;
   width: 100%;
   min-width: 1050px;
   background: #fff;
   border-top: 1px solid rgb(247, 247, 247);
 `;
+
 const Inner = styled.div`
   position: relative;
   width: 1050px;
@@ -16,6 +17,7 @@ const Inner = styled.div`
   justify-content: space-between;
   padding: 40px 0 60px;
 `;
+
 const CsTitle = styled.h3`
   margin-bottom: 5px;
   font-weight: bold;
@@ -23,6 +25,7 @@ const CsTitle = styled.h3`
   line-height: 29px;
   letter-spacing: -0.5px;
 `;
+
 const CsDesc = styled.p`
   color: rgb(153, 153, 153);
   font-size: 14px;
@@ -35,6 +38,7 @@ const CsInfo = styled.div`
     max-width: 100%;
   }
 `;
+
 const Fnb = styled.ul`
   display: flex;
   padding-bottom: 15px;
@@ -48,12 +52,14 @@ const Fnb = styled.ul`
     display: block;
     text-decoration: none;
     transition: all 0.5s ease;
+    color: #333;
     &:hover {
       color: #418f22;
     }
   }
 `;
-const CompanyInfo = styled.ul`
+
+const CompanyInfoUl = styled.ul`
   li {
     font-weight: 400;
     font-size: 12px;
@@ -61,7 +67,8 @@ const CompanyInfo = styled.ul`
     color: rgb(153, 153, 153);
   }
 `;
-const SnsArea = styled.ul`
+
+const SnsAreaUl = styled.ul`
   display: flex;
   margin-top: 15px;
   li {
@@ -71,6 +78,7 @@ const SnsArea = styled.ul`
     width: 30px;
   }
 `;
+
 const Copyright = styled.p`
   padding: 20px 0px 30px;
   font-size: 12px;
@@ -80,4 +88,4 @@ const Copyright = styled.p`
   color: rgb(153, 153, 153);
 `;
 
-export { Footer, Inner, CompanyInfo, Copyright, CsInfo, CsTitle, Fnb, SnsArea, CsDesc };
+export { Footer, Inner, CompanyInfoUl, Copyright, CsInfo, CsTitle, Fnb, SnsAreaUl, CsDesc };
