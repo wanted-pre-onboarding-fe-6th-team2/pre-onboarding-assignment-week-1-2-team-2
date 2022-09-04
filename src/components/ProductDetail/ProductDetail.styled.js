@@ -52,7 +52,7 @@ const DivWrap = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  img,
   button {
     cursor: pointer;
   }
@@ -66,7 +66,7 @@ const Modal = styled.div`
   justify-content: center;
   align-items: center;
   right: 10%;
-  top: 6%;
+  top: 7%;
   background-color: white;
   box-shadow: 2px 2px 2px 2px rgb(181, 181, 181);
 `;

@@ -80,6 +80,12 @@ const ProductDetail = () => {
     );
   };
 
+  const handleSubmit = () => {
+    if (productListToBuy.length === 0) {
+      alert('상품 옵션을 선택해주세요.');
+    } else alert('주문페이지로 이동합니다.');
+  };
+
   // 외부 클릭 시에도 닫히도록 하는 함수
   const handleClickOutside = e => {
     if (isShareModalOpened && !copyModalRef.current.includes(e.target)) {
@@ -204,7 +210,7 @@ const ProductDetail = () => {
             ) : (
               <img src={likeIcon} alt="좋아요 클릭 전 아이콘" onClick={handleClickLike} />
             )}
-            <button onClick={() => alert('주문페이지로 이동합니다.')}>구매하기</button>
+            <button onClick={handleSubmit}>구매하기</button>
             <button>장바구니</button>
           </Styled.ButtonGroup>
         </div>
