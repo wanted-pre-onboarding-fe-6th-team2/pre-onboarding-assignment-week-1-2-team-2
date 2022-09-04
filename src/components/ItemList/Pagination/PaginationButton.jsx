@@ -1,4 +1,5 @@
 import React from 'react';
+import * as Styled from '@/components/ItemList/Pagination/Pagination.styled';
 
 const PaginationButton = ({ itemsPerPage, totalItem, paginate }) => {
   const totalPages = Math.ceil(totalItem / itemsPerPage);
@@ -10,20 +11,20 @@ const PaginationButton = ({ itemsPerPage, totalItem, paginate }) => {
   };
 
   return (
-    <div>
-      <button>prev</button>
+    <Styled.PaginationButtonContainer>
+      <Styled.PaginationButton>prev</Styled.PaginationButton>
       {pageNumbers.map((pageNumber, index) => (
-        <button
+        <Styled.PaginationButton
           key={index}
           onClick={() => {
             handlePageClick(pageNumber);
           }}
         >
           {pageNumber}
-        </button>
+        </Styled.PaginationButton>
       ))}
-      <button>next</button>
-    </div>
+      <Styled.PaginationButton>next</Styled.PaginationButton>
+    </Styled.PaginationButtonContainer>
   );
 };
 

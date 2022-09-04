@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ItemList from '@/components/ItemList/ItemList';
 import PaginationButton from '@/components/ItemList/Pagination/PaginationButton';
+import * as Styled from '@/components/ItemList/Pagination/Pagination.styled';
 
 const Pagination = ({ data }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -16,14 +17,14 @@ const Pagination = ({ data }) => {
   };
 
   return (
-    <>
+    <Styled.PaginationSection>
       <ItemList data={currentItems(data)} page={currentPage} />
       <PaginationButton
         itemsPerPage={itemsPerPage}
         totalItem={data.length}
         paginate={setCurrentPage}
       />
-    </>
+    </Styled.PaginationSection>
   );
 };
 
