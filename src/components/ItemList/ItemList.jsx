@@ -6,6 +6,7 @@ import logo from '@/assets/images/logo.png';
 const ItemList = ({ data }) => {
   return (
     <Styled.ItemList>
+      <p>총 {data.length} 건</p>
       <div>
         <img src={logo} alt="로고" />
         <h2>프루떼[수확 배송]</h2>

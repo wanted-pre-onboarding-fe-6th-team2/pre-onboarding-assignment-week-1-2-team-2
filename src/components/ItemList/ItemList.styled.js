@@ -4,6 +4,13 @@ const ItemList = styled.ul`
   display: grid;
   grid-template-columns: repeat(3, 25vw);
   justify-content: center;
+  position: relative;
+
+  & > p {
+    position: absolute;
+    top: 7em;
+    left: 2.5em;
+  }
 
   & > div {
     grid-column: 1 / 4;
@@ -30,7 +37,7 @@ const ItemList = styled.ul`
   }
 
   @media all and (max-width: 768px) {
-    grid-template-columns: repeat(1, 75vw);
+    grid-template-columns: repeat(1, 80vw);
 
     & > div {
       grid-column: 1;
@@ -40,6 +47,7 @@ const ItemList = styled.ul`
 
 const Item = styled.li`
   width: 100%;
+  height: 100%;
   margin: 0 auto;
   padding: 0.5em;
   box-sizing: border-box;
@@ -49,12 +57,18 @@ const Item = styled.li`
 `;
 
 const ItemImageContainer = styled.div`
-  width: 100%;
+  height: 20em;
   overflow: hidden;
+
+  @media all and (max-width: 768px) {
+    height: 25em;
+  }
 `;
 
 const ItemImage = styled.img`
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 
   &:hover {
     transform: scale(1.1);
