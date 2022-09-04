@@ -1,12 +1,5 @@
 import styled from '@emotion/styled';
 
-const OrderListHeading = styled.h3`
-  font-size: 20px;
-  font-weight: 500;
-  padding: 16px 0;
-  border-bottom: 1px solid black;
-`;
-
 const ProductListItem = styled.li`
   display: flex;
   justify-content: space-between;
@@ -36,11 +29,4 @@ const ProductPrice = styled.span`
   font-weight: 700;
 `;
 
-export {
-  OrderListHeading,
-  ProductListItem,
-  ProductImage,
-  ProductTitle,
-  ProductCount,
-  ProductPrice,
-};
+export { ProductListItem, ProductImage, ProductTitle, ProductCount, ProductPrice };

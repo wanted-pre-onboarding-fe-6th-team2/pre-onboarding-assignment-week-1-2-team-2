@@ -1,8 +1,9 @@
 import * as Styled from '@/components/order/OrderList/OrderList.styled';
+import SectionHeading from '@/components/order/SectionHeading/SectionHeading';
 
 const OrderList = () => (
   <section>
-    <Styled.OrderListHeading>주문 상품</Styled.OrderListHeading>
+    <SectionHeading>주문 상품</SectionHeading>
     <ul>
       <Styled.ProductListItem>
         <Styled.ProductImage
