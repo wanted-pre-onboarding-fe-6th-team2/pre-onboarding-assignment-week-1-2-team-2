@@ -5,7 +5,6 @@ import clickedLikeIcon from '@/assets/svg/clicked-like.svg';
 import shareIcon from '@/assets/svg/share.svg';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
 import { useEffect, useState, useRef } from 'react';
 import { useSelector } from 'react-redux';
 
@@ -75,8 +74,8 @@ const ProductDetail = () => {
   };
 
   const additionalShippingDescription = () => {
-    const shippingCutline = shipping.shippingBasis - totalPrice();
-    if (shippingCutline > 0) return `(${handleFormatPrice(shippingCutline)}원 추가하면 무료배송!)`;
+    const shippingCutLine = shipping.shippingBasis - totalPrice();
+    if (shippingCutLine > 0) return `(${handleFormatPrice(shippingCutLine)}원 추가하면 무료배송!)`;
     else return '(무료배송)';
   };
 
@@ -142,7 +141,7 @@ const ProductDetail = () => {
           <Styled.Dl>
             <dt style={{ margin: 'auto 0' }}>상품 선택</dt>
             <FormControl sx={{ m: 1, minWidth: 300 }} size="small" style={{ margin: 0 }}>
-              <Select
+              <Styled.StyledSelect
                 value={selectedItem}
                 onChange={handleChangeSelectBox}
                 displayEmpty
@@ -160,7 +159,7 @@ const ProductDetail = () => {
                     </Styled.MenuItemDiv>
                   </MenuItem>
                 ))}
-              </Select>
+              </Styled.StyledSelect>
             </FormControl>
           </Styled.Dl>
           {productListToBuy.length > 0 &&

@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { Select } from '@mui/material';
 
 const Container = styled.article`
   display: flex;
@@ -69,6 +70,25 @@ const Modal = styled.div`
   top: 6%;
   background-color: white;
   box-shadow: 2px 2px 2px 2px rgb(181, 181, 181);
+
+  input {
+    border: 1px rgb(181, 181, 181) solid;
+    padding: 5px 10px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+
+  button {
+    border: none;
+    background-color: #4c9c2e;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 12px;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+  }
 `;
 
 const ButtonGroup = styled.div`
@@ -92,7 +112,7 @@ const ButtonGroup = styled.div`
 
 const SpanGroup = styled.div`
   text-align: right;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
   span {
     font-weight: bold;
     font-size: 28px;
@@ -164,6 +184,12 @@ const AdditionDiv = styled.div`
   padding-bottom: 20px;
 `;
 
+const StyledSelect = styled(Select)`
+  fieldset {
+    border-color: #4c9c2e !important;
+  }
+`;
+
 export {
   Container,
   Dl,
@@ -178,4 +204,5 @@ export {
   DivGroup,
   MenuItemDiv,
   AdditionDiv,
+  StyledSelect,
 };
