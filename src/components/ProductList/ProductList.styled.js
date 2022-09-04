@@ -2,27 +2,19 @@ import styled from '@emotion/styled';
 
 const ProductList = styled.ul`
   display: grid;
-  grid-template-columns: repeat(3, 25vw);
+  grid-template-columns: repeat(4, 20vw);
   justify-content: center;
   position: relative;
 
   & > div {
-    grid-column: 1 / 4;
+    grid-column: 1 / 5;
   }
 
   @media all and (max-width: 1024px) {
-    grid-template-columns: repeat(2, 35vw);
+    grid-template-columns: repeat(2, 45vw);
 
     & > div {
       grid-column: 1 / 3;
-    }
-  }
-
-  @media all and (max-width: 768px) {
-    grid-template-columns: repeat(1, 80vw);
-
-    & > div {
-      grid-column: 1;
     }
   }
 `;
@@ -50,7 +42,6 @@ const StoreDescription = styled.div`
   }
 
   & > p:last-child {
-    /* flex-basis: 3em; */
     margin-top: 1em;
   }
 
@@ -73,8 +64,16 @@ const Product = styled.li`
 
 const ProductImageContainer = styled.div`
   width: 100%;
-  height: 20em;
+  height: 300px;
   overflow: hidden;
+
+  @media all and (max-width: 1024px) {
+    height: 400px;
+  }
+
+  @media all and (max-width: 768px) {
+    height: 25vh;
+  }
 `;
 
 const ProductImage = styled.img`
