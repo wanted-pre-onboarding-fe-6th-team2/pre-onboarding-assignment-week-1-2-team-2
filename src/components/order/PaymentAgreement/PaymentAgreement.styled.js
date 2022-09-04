@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 const PaymentAgreementSection = styled.section`
-  margin: 60px 0;
+  margin-top: 60px;
 `;
 
 const PaymentAgreementCheckbox = styled.input`
@@ -18,4 +18,19 @@ const PaymentAgreementLabel = styled.label`
   font-size: 14px;
 `;
 
-export { PaymentAgreementSection, PaymentAgreementCheckbox, PaymentAgreementLabel };
+const OrderButton = styled.button`
+  display: block;
+  margin: 60px auto;
+  padding: 18px 10px;
+  width: 240px;
+  background: #4c9c2e;
+  border: 0;
+  border-radius: 3px;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+`;
+
+export { PaymentAgreementSection, PaymentAgreementCheckbox, PaymentAgreementLabel, OrderButton };
