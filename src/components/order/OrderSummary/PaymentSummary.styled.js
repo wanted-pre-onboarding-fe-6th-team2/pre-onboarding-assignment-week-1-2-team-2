@@ -4,8 +4,7 @@ const PaymentSummarySection = styled.section`
   position: absolute;
   top: 60px;
   right: 0;
-  padding: 20px;
-  width: 245px;
+  width: 260px;
 `;
 
 const PaymentSummaryHeading = styled.h3`
