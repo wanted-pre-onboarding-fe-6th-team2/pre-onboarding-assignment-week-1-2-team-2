@@ -1,5 +1,6 @@
 import OrdererInfo from '@/components/order/OrdererInfo/OrdererInfo';
 import OrderList from '@/components/order/OrderList/OrderList';
+import PaymentAgreement from '@/components/order/PaymentAgreement/PaymentAgreement';
 import PaymentMethod from '@/components/order/PaymentMethod/PaymentMethod';
 import ShippingInfo from '@/components/order/ShippingInfo/ShippingInfo';
 import * as Styled from '@/pages/Order/Order.styled';
@@ -14,6 +15,7 @@ const Order = () => {
           <OrdererInfo />
           <ShippingInfo />
           <PaymentMethod />
+          <PaymentAgreement />
         </div>
       </Styled.FlexBox>
     </Styled.PageContainer>
