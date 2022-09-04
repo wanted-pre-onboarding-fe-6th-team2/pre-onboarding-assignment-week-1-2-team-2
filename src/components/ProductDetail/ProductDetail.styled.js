@@ -26,10 +26,15 @@ const Div = styled.div`
 `;
 
 const PriceDiv = styled.div`
-  font-size: 28px;
-  color: rgb(51, 51, 51);
-  font-weight: bold;
   padding: 17px 0px 18px;
+  * {
+    font-size: 28px;
+    color: rgb(51, 51, 51);
+    font-weight: bold;
+  }
+  span:last-of-type {
+    font-size: 20px;
+  }
 `;
 
 const H2 = styled.h2`
@@ -49,13 +54,8 @@ const DivWrap = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  img,
   button {
     cursor: pointer;
-  }
-
-  img:first-of-type {
-    margin-right: 10px;
   }
 `;
 
@@ -74,6 +74,11 @@ const Modal = styled.div`
 
 const ButtonGroup = styled.div`
   display: flex;
+  justify-content: space-between;
+
+  img {
+    cursor: pointer;
+  }
   button {
     background-color: #4c9c2e;
     border: none;
@@ -82,10 +87,78 @@ const ButtonGroup = styled.div`
     cursor: pointer;
     font-weight: bold;
     font-size: 16px;
+  }
+`;
 
-    &:first-of-type {
-      margin-right: 40px;
+const SpanGroup = styled.div`
+  text-align: right;
+  padding-bottom: 20px;
+  span {
+    font-weight: bold;
+    font-size: 28px;
+  }
+  span:first-of-type {
+    margin-right: 10px;
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  span:last-of-type {
+    font-size: 20px;
+  }
+`;
+
+const DivGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 11px 10px 11px 15px;
+  font-size: 12px;
+  border: 1px solid rgb(244, 244, 244);
+
+  .close-btn {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .detail {
+    padding-top: 15px;
+  }
+
+  .btn-group {
+    border: 1px solid rgb(221, 223, 225);
+    width: 88px;
+    border-radius: 3px;
+
+    button {
+      background-color: white;
+      border: none;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    div {
+      font-size: 14px;
     }
   }
 `;
-export { Container, Dl, Div, PriceDiv, H2, Description, DivWrap, Modal, ButtonGroup };
+export {
+  Container,
+  Dl,
+  Div,
+  PriceDiv,
+  H2,
+  Description,
+  DivWrap,
+  Modal,
+  ButtonGroup,
+  SpanGroup,
+  DivGroup,
+};
