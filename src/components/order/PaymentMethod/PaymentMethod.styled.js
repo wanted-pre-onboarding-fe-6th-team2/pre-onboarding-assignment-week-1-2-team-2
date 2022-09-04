@@ -1,3 +1,4 @@
+import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 
 const PaymentMethodSection = styled.section`
@@ -21,12 +22,16 @@ const PaymentMethodList = styled.ul`
 `;
 
 const PaymentMethodSelectButton = styled.button`
-  font-size: 14px;
-  width: 138px;
-  height: 48px;
-  background: transparent;
-  border: 1px solid rgb(226, 226, 226);
-  border-radius: 3px;
+  ${({ isCurrentPaymentMethod }) => css`
+    font-size: 14px;
+    width: 138px;
+    height: 48px;
+    background: ${isCurrentPaymentMethod ? '#4c9c2e' : 'transparent'};
+    color: ${isCurrentPaymentMethod ? '#fff' : '#000'};
+    border: 1px solid rgb(226, 226, 226);
+    border-radius: 3px;
+    cursor: pointer;
+  `}
 `;
 
 export {
