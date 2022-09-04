@@ -62,7 +62,6 @@ const Item = styled.li`
   display: flex;
   flex-direction: column;
   gap: 0.25em;
-  align-items: center;
 `;
 
 const ItemImageContainer = styled.div`
@@ -83,6 +82,7 @@ const ItemImage = styled.img`
 `;
 
 const ItemName = styled.h2`
+  width: 100%;
   margin-top: 0.5em;
   font-weight: bold;
   font-size: 1.2em;
