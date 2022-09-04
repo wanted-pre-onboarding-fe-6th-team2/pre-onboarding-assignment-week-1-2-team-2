@@ -9,7 +9,9 @@ const dummy = [
   {
     id: 1,
     imageUrl: img,
-    Name: '물에 타먹는 제주 수제 감귤칩',
+    name: '물에 타먹는 제주 수제 감귤칩',
+    description:
+      '물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩',
     option: [
       {
         optionId: 1,
@@ -31,7 +33,9 @@ const dummy = [
   {
     id: 2,
     imageUrl: img,
-    Name: '전통 재래식 메주로 띄운 수제 된장 1kg, 2kg',
+    name: '전통 재래식 메주로 띄운 수제 된장 1kg, 2kg',
+    description:
+      '물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩',
     option: [
       {
         optionId: 1,
@@ -53,7 +57,9 @@ const dummy = [
   {
     id: 3,
     imageUrl: img,
-    Name: '100% 제주감귤주스 (15팩 x 1box)',
+    name: '100% 제주감귤주스 (15팩 x 1box)',
+    description:
+      '물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩',
     option: [
       {
         optionId: 1,
@@ -75,7 +81,9 @@ const dummy = [
   {
     id: 4,
     imageUrl: img,
-    Name: '반려동물과자 아기과자 동결건조 사과칩 50g (5봉지, 10봉지 묶음상품)',
+    name: '반려동물과자 아기과자 동결건조 사과칩 50g (5봉지, 10봉지 묶음상품)',
+    description:
+      '물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩',
     option: [
       {
         optionId: 1,
@@ -97,7 +105,9 @@ const dummy = [
   {
     id: 5,
     imageUrl: img,
-    Name: '100% 제주감귤주스 (15팩 x 1box)',
+    name: '100% 제주감귤주스 (15팩 x 1box)',
+    description:
+      '물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩',
     option: [
       {
         optionId: 1,
@@ -119,7 +129,9 @@ const dummy = [
   {
     id: 6,
     imageUrl: img,
-    Name: '반려동물과자 아기과자 동결건조 사과칩 50g (5봉지, 10봉지 묶음상품)',
+    name: '반려동물과자 아기과자 동결건조 사과칩 50g (5봉지, 10봉지 묶음상품)',
+    description:
+      '물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩',
     option: [
       {
         optionId: 1,
@@ -141,7 +153,9 @@ const dummy = [
   {
     id: 7,
     imageUrl: img,
-    Name: '아이스크림',
+    name: '아이스크림',
+    description:
+      '물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩',
     option: [
       {
         optionId: 1,
@@ -163,7 +177,9 @@ const dummy = [
   {
     id: 8,
     imageUrl: img,
-    Name: '아이스크림',
+    name: '아이스크림',
+    description:
+      '물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩',
     option: [
       {
         optionId: 1,
@@ -185,7 +201,9 @@ const dummy = [
   {
     id: 9,
     imageUrl: img,
-    Name: '아이스크림',
+    name: '아이스크림',
+    description:
+      '물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩',
     option: [
       {
         optionId: 1,
@@ -207,7 +225,9 @@ const dummy = [
   {
     id: 10,
     imageUrl: img,
-    Name: '아이스크림',
+    name: '아이스크림',
+    description:
+      '물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩',
     option: [
       {
         optionId: 1,
@@ -229,7 +249,9 @@ const dummy = [
   {
     id: 11,
     imageUrl: img,
-    Name: '사탕',
+    name: '사탕',
+    description:
+      '물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩',
     option: [
       {
         optionId: 1,
@@ -251,7 +273,9 @@ const dummy = [
   {
     id: 12,
     imageUrl: img,
-    Name: '과자',
+    name: '과자',
+    description:
+      '물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩',
     option: [
       {
         optionId: 1,
@@ -273,7 +297,9 @@ const dummy = [
   {
     id: 13,
     imageUrl: img,
-    Name: '아이스크림',
+    name: '아이스크림',
+    description:
+      '물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩',
     option: [
       {
         optionId: 1,
@@ -295,7 +321,9 @@ const dummy = [
   {
     id: 14,
     imageUrl: img,
-    Name: '아이스크림',
+    name: '아이스크림',
+    description:
+      '물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩',
     option: [
       {
         optionId: 1,
@@ -317,7 +345,9 @@ const dummy = [
   {
     id: 15,
     imageUrl: img,
-    Name: '아이스크림',
+    name: '아이스크림',
+    description:
+      '물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩',
     option: [
       {
         optionId: 1,
@@ -339,7 +369,9 @@ const dummy = [
   {
     id: 16,
     imageUrl: img,
-    Name: '아이스크림',
+    name: '아이스크림',
+    description:
+      '물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩',
     option: [
       {
         optionId: 1,
@@ -361,7 +393,9 @@ const dummy = [
   {
     id: 17,
     imageUrl: img,
-    Name: '아이스크림',
+    name: '아이스크림',
+    description:
+      '물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩',
     option: [
       {
         optionId: 1,
@@ -383,7 +417,9 @@ const dummy = [
   {
     id: 18,
     imageUrl: img,
-    Name: '아이스크림',
+    name: '아이스크림',
+    description:
+      '물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩',
     option: [
       {
         optionId: 1,
@@ -405,7 +441,9 @@ const dummy = [
   {
     id: 19,
     imageUrl: img,
-    Name: '아이스크림',
+    name: '아이스크림',
+    description:
+      '물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩',
     option: [
       {
         optionId: 1,
@@ -427,7 +465,9 @@ const dummy = [
   {
     id: 20,
     imageUrl: img,
-    Name: '아이스크림',
+    name: '아이스크림',
+    description:
+      '물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩',
     option: [
       {
         optionId: 1,
@@ -449,7 +489,9 @@ const dummy = [
   {
     id: 21,
     imageUrl: img,
-    Name: '사탕',
+    name: '사탕',
+    description:
+      '물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩',
     option: [
       {
         optionId: 1,
@@ -471,7 +513,9 @@ const dummy = [
   {
     id: 22,
     imageUrl: img,
-    Name: '과자',
+    name: '과자',
+    description:
+      '물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩',
     option: [
       {
         optionId: 1,
@@ -493,7 +537,9 @@ const dummy = [
   {
     id: 23,
     imageUrl: img,
-    Name: '아이스크림',
+    name: '아이스크림',
+    description:
+      '물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩',
     option: [
       {
         optionId: 1,
@@ -515,7 +561,9 @@ const dummy = [
   {
     id: 24,
     imageUrl: img,
-    Name: '아이스크림',
+    name: '아이스크림',
+    description:
+      '물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩',
     option: [
       {
         optionId: 1,
@@ -537,7 +585,9 @@ const dummy = [
   {
     id: 25,
     imageUrl: img,
-    Name: '아이스크림',
+    name: '아이스크림',
+    description:
+      '물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩',
     option: [
       {
         optionId: 1,
@@ -559,7 +609,9 @@ const dummy = [
   {
     id: 26,
     imageUrl: img,
-    Name: '아이스크림',
+    name: '아이스크림',
+    description:
+      '물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩',
     option: [
       {
         optionId: 1,
@@ -581,7 +633,9 @@ const dummy = [
   {
     id: 27,
     imageUrl: img,
-    Name: '아이스크림',
+    name: '아이스크림',
+    description:
+      '물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩',
     option: [
       {
         optionId: 1,
@@ -603,7 +657,9 @@ const dummy = [
   {
     id: 28,
     imageUrl: img,
-    Name: '아이스크림',
+    name: '아이스크림',
+    description:
+      '물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩',
     option: [
       {
         optionId: 1,
@@ -625,7 +681,9 @@ const dummy = [
   {
     id: 29,
     imageUrl: img,
-    Name: '아이스크림',
+    name: '아이스크림',
+    description:
+      '물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩',
     option: [
       {
         optionId: 1,
@@ -647,7 +705,9 @@ const dummy = [
   {
     id: 30,
     imageUrl: img,
-    Name: '아이스크림',
+    name: '아이스크림',
+    description:
+      '물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩',
     option: [
       {
         optionId: 1,
@@ -669,7 +729,9 @@ const dummy = [
   {
     id: 31,
     imageUrl: img,
-    Name: '아이스크림',
+    name: '아이스크림',
+    description:
+      '물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩',
     option: [
       {
         optionId: 1,
@@ -691,7 +753,9 @@ const dummy = [
   {
     id: 32,
     imageUrl: img,
-    Name: '아이스크림',
+    name: '아이스크림',
+    description:
+      '물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩',
     option: [
       {
         optionId: 1,
@@ -713,7 +777,9 @@ const dummy = [
   {
     id: 33,
     imageUrl: img,
-    Name: '아이스크림',
+    name: '아이스크림',
+    description:
+      '물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩',
     option: [
       {
         optionId: 1,
@@ -735,7 +801,9 @@ const dummy = [
   {
     id: 34,
     imageUrl: img,
-    Name: '아이스크림',
+    name: '아이스크림',
+    description:
+      '물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩',
     option: [
       {
         optionId: 1,
@@ -757,7 +825,9 @@ const dummy = [
   {
     id: 35,
     imageUrl: img,
-    Name: '아이스크림',
+    name: '아이스크림',
+    description:
+      '물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩',
     option: [
       {
         optionId: 1,
@@ -779,7 +849,9 @@ const dummy = [
   {
     id: 36,
     imageUrl: img,
-    Name: '아이스크림',
+    name: '아이스크림',
+    description:
+      '물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩',
     option: [
       {
         optionId: 1,
@@ -801,7 +873,9 @@ const dummy = [
   {
     id: 37,
     imageUrl: img,
-    Name: '아이스크림',
+    name: '아이스크림',
+    description:
+      '물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩 물에 타먹는 제주 수제 감귤칩',
     option: [
       {
         optionId: 1,
