@@ -2,8 +2,8 @@ import * as Styled from '@/components/order/OrdererInfo/OrdererInfo.styled';
 import SectionHeading from '../SectionHeading/SectionHeading';
 
 const ORDERER_NAME = 'orderer-name';
-const ORDERER_PHONE_NUMBER = 'orderer-name';
-const ORDERER_EMAIL = 'orderer-name';
+const ORDERER_PHONE_NUMBER = 'orderer-phone-number';
+const ORDERER_EMAIL = 'orderer-email';
 
 const OrdererInfoFormItems = [
   { label: '보내는 분', id: ORDERER_NAME, inputType: 'text' },
@@ -17,7 +17,7 @@ const OrdererInfo = () => (
     <Styled.OrdererInfoForm>
       {OrdererInfoFormItems.map(({ id, inputType, label }) => {
         return (
-          <Styled.OrdererInfoFormInputWrapper>
+          <Styled.OrdererInfoFormInputWrapper key={id}>
             <Styled.OrdererInfoLabel htmlFor={id}>{label}</Styled.OrdererInfoLabel>
             <Styled.OrdererInfoInput type={inputType} id={id} />
           </Styled.OrdererInfoFormInputWrapper>
