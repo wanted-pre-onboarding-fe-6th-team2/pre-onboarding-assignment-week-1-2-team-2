@@ -2,7 +2,7 @@ export const initialState = [
   {
     id: 1,
     iamgeUrl: 'image',
-    Name: '사탕',
+    name: '사탕',
     option: [
       {
         optionId: 1,
