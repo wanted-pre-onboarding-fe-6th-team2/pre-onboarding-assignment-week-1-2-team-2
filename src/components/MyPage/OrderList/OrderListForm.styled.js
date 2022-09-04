@@ -8,10 +8,12 @@ const Title = styled.h2`
   padding: 20px 0;
   letter-spacing: -0.5px;
 `;
+
 const OrderContainer = styled.div`
   border-bottom: 1px solid #333;
   padding: 16px 20px;
 `;
+
 const NoData = styled.div`
   padding: 50px 0;
   text-align: center;

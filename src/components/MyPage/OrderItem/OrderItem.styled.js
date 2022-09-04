@@ -2,11 +2,11 @@ import styled from '@emotion/styled';
 
 const OrderRow = styled.div`
   margin-bottom: 14px;
-
   & + & {
     border-top: 1px solid #333;
   }
 `;
+
 const OrderDate = styled.p`
   border-bottom: 1px solid rgb(221, 223, 225);
   padding: 8px 0px 13px;
@@ -14,21 +14,24 @@ const OrderDate = styled.p`
   font-weight: bold;
   letter-spacing: -0.43px;
 `;
+
 const OrderItem = styled.div`
   display: flex;
   padding: 14px 0px 16px;
   justify-content: space-between;
   align-items: center;
 `;
+
 const OrderImageWrapper = styled.div`
-  width: 70px;
+  width: 100px;
   margin-right: 20px;
 `;
+
 const OrderImage = styled.img`
   width: 100%;
   border: 1px solid #f5f5f5;
 `;
-const OrderInfo = styled.div``;
+
 const OrderProductName = styled.h4`
   font-size: 16px;
   font-weight: bold;
@@ -37,14 +40,17 @@ const OrderProductName = styled.h4`
   padding-bottom: 2px;
   letter-spacing: -0.22px;
 `;
+
 const OrderOption = styled.span`
   line-height: 1.43;
   color: rgb(153, 153, 153);
 `;
+
 const OrderFlex = styled.div`
   display: flex;
   align-items: center;
 `;
+
 const OrderQuantity = styled.span`
   letter-spacing: -0.22px;
   color: rgb(153, 153, 153);
@@ -57,12 +63,14 @@ const OrderQuantity = styled.span`
     margin: 0 10px;
   }
 `;
+
 const OrderPrice = styled.p`
   margin-right: 6px;
   font-weight: bold;
   line-height: 1.5;
   margin-top: 8px;
 `;
+
 const OrderState = styled.div`
   width: 100px;
   font-size: 16px;
@@ -76,7 +84,6 @@ export {
   OrderRow,
   OrderImageWrapper,
   OrderImage,
-  OrderInfo,
   OrderProductName,
   OrderOption,
   OrderQuantity,

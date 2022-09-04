@@ -1,10 +1,10 @@
+import PageContainer from '@/components/common/page/PageContainer';
+import OrderListForm from '@/components/myPage/orderList/OrderListForm';
 import React from 'react';
-import PageContainer from '@/components/PageContainer/Page/PageContainer';
-import OrderListForm from '@/components/MyPage/OrderList/OrderListForm';
 
 export default function OrderList() {
   return (
-    <PageContainer>
+    <PageContainer as="space">
       <OrderListForm />
     </PageContainer>
   );
