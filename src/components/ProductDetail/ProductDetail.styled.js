@@ -60,14 +60,14 @@ const DivWrap = styled.div`
 `;
 
 const Modal = styled.div`
-  position: fixed;
+  position: absolute;
   height: 60px;
   padding: 0 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  right: 21.5%;
-  top: 6%;
+  top: 50px;
+  margin-left: 180px;
   background-color: white;
   box-shadow: 2px 2px 2px 2px rgb(181, 181, 181);
 
