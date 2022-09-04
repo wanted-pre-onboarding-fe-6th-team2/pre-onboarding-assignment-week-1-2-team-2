@@ -1,22 +1,46 @@
 import styled from '@emotion/styled';
 
 const ItemList = styled.ul`
-  width: 100%;
-  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 25vw);
+  justify-content: center;
+
+  & > div {
+    grid-column: 1 / 4;
+    text-align: center;
+    margin-bottom: 3em;
+
+    & > img {
+      width: 2em;
+      height: 2em;
+    }
+
+    & > h2 {
+      font-size: 2em;
+      font-weight: bold;
+    }
+  }
 
   @media all and (max-width: 1024px) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 35vw);
+
+    & > div {
+      grid-column: 1 / 3;
+    }
   }
 
   @media all and (max-width: 768px) {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 75vw);
+
+    & > div {
+      grid-column: 1;
+    }
   }
 `;
 
 const Item = styled.li`
   width: 100%;
+  margin: 0 auto;
   padding: 0.5em;
   box-sizing: border-box;
   display: flex;
@@ -26,17 +50,7 @@ const Item = styled.li`
 
 const ItemImageContainer = styled.div`
   width: 100%;
-  height: 100%;
   overflow: hidden;
-  flex-basis: 50%;
-
-  @media all and (max-width: 1024px) {
-    flex-basis: 70%;
-  }
-
-  @media all and (max-width: 768px) {
-    flex-basis: 100%;
-  }
 `;
 
 const ItemImage = styled.img`
@@ -49,13 +63,18 @@ const ItemImage = styled.img`
 `;
 
 const ItemName = styled.h2`
-  font-weight: 400;
+  font-weight: bold;
+  font-size: 1.2em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 `;
 
 const DiscountRate = styled.span`
   color: red;
   font-size: 0.75em;
   font-weight: bold;
+  margin-right: 0.5em;
 `;
 
 const ItemDiscountPrice = styled.p`
