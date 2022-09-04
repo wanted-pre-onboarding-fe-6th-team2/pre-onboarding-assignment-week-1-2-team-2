@@ -1,6 +1,7 @@
 import * as Styled from '@/components/order/ShippingInfo/ShippingInfo.styled';
 import SectionHeading from '@/components/order/SectionHeading/SectionHeading';
 import { useDaumPostcodePopup } from 'react-daum-postcode';
+import { useState } from 'react';
 
 const RECIPIENT_NAME = 'recipient-name';
 const RECIPIENT_PHONE_NUMBER = 'recipient-phone-number';
@@ -17,6 +18,17 @@ const RecipientInfoFormItems = [
 
 const ShippingInfo = () => {
   const daumPostCodeOpen = useDaumPostcodePopup();
+  const [shippingForm, setShippingForm] = useState({
+    recipient: '',
+    phoneNumber: '',
+    email: '',
+    address: '',
+    addressDetail: '',
+  });
+
+  const handleOnCompleteOfDaumPost = ({ address }) => {
+    setShippingForm(pre => ({ ...pre, address }));
+  };
   return (
     <Styled.ShippingInfoSection>
       <SectionHeading>배송 정보</SectionHeading>
@@ -34,21 +46,26 @@ const ShippingInfo = () => {
           <Styled.AddressInfoInput
             type="text"
             id={SHIPPING_ADDRESS}
-            placeholder="기본 정보"
+            value={shippingForm.address}
+            placeholder="기본 주소"
             disabled
           />
-          <Styled.AddressSearchButton type="button" onClick={daumPostCodeOpen}>
+          <Styled.AddressSearchButton
+            type="button"
+            onClick={() => daumPostCodeOpen({ onComplete: handleOnCompleteOfDaumPost })}
+          >
             주소 찾기
           </Styled.AddressSearchButton>
         </Styled.ShippingInfoFormInputWrapper>
         <Styled.ShippingInfoFormInputWrapper>
           <Styled.ShippingInfoLabel htmlFor={SHIPPING_ADDRESS_DETAIL}>
-            상세 정보
+            상세 주소
           </Styled.ShippingInfoLabel>
           <Styled.AddressInfoInput
             type="text"
             id={SHIPPING_ADDRESS_DETAIL}
-            placeholder="상세 정보"
+            value={shippingForm.addressDetail}
+            placeholder="상세 주소"
           />
         </Styled.ShippingInfoFormInputWrapper>
       </Styled.ShippingInfoForm>
