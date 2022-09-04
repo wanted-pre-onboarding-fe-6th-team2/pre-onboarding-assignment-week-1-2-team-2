@@ -10,7 +10,7 @@ const PaymentSummary = () => (
     <Styled.PaymentSummaryHeading>결제 요약</Styled.PaymentSummaryHeading>
     <Styled.SummaryBox>
       {PaymentSummaryList.map(({ title, amount }) => (
-        <Styled.SummaryWrapper>
+        <Styled.SummaryWrapper key={title}>
           <Styled.SummaryTitle>{title}</Styled.SummaryTitle>
           <Styled.SummaryContent>{amount.toLocaleString()} 원</Styled.SummaryContent>
         </Styled.SummaryWrapper>
