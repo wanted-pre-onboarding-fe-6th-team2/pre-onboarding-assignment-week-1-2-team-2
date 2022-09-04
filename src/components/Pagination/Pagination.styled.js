@@ -3,11 +3,12 @@ import styled from '@emotion/styled';
 const PaginationSection = styled.section`
   width: 80%;
   margin: 0 auto;
+  position: relative;
 
   & > p {
     position: absolute;
-    top: 38%;
-    left: 13%;
+    top: 9.5em;
+    left: 3em;
 
     & > span {
       font-weight: bold;
@@ -17,17 +18,15 @@ const PaginationSection = styled.section`
 
   @media all and (max-width: 1024px) {
     & > p {
-      position: absolute;
-      top: 38%;
-      left: 16%;
+      top: 9.5em;
+      left: 3.5em;
     }
   }
 
   @media all and (max-width: 768px) {
     & > p {
-      position: absolute;
-      top: 37%;
-      left: 11%;
+      top: 10em;
+      left: 0.5em;
     }
   }
 `;

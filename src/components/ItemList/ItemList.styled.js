@@ -21,6 +21,15 @@ const ItemList = styled.ul`
       font-weight: bold;
       margin-bottom: 0.25em;
     }
+
+    & > p {
+      font-size: 0.9em;
+      margin-bottom: 0.25em;
+
+      @media all and (max-width: 768px) {
+        font-size: 0.8em;
+      }
+    }
   }
 
   @media all and (max-width: 1024px) {
@@ -53,15 +62,13 @@ const Item = styled.li`
   display: flex;
   flex-direction: column;
   gap: 0.25em;
+  align-items: center;
 `;
 
 const ItemImageContainer = styled.div`
+  width: 100%;
   height: 20em;
   overflow: hidden;
-
-  @media all and (max-width: 768px) {
-    height: 25em;
-  }
 `;
 
 const ItemImage = styled.img`
