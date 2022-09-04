@@ -65,8 +65,8 @@ const Modal = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  right: 10%;
-  top: 7%;
+  right: 21.5%;
+  top: 6%;
   background-color: white;
   box-shadow: 2px 2px 2px 2px rgb(181, 181, 181);
 `;
@@ -92,7 +92,7 @@ const ButtonGroup = styled.div`
 
 const SpanGroup = styled.div`
   text-align: right;
-  padding-bottom: 20px;
+  padding-bottom: 5px;
   span {
     font-weight: bold;
     font-size: 28px;
@@ -157,6 +157,13 @@ const MenuItemDiv = styled.div`
   width: 100%;
 `;
 
+const AdditionDiv = styled.div`
+  text-align: right;
+  font-size: 14px;
+  color: red;
+  padding-bottom: 20px;
+`;
+
 export {
   Container,
   Dl,
@@ -170,4 +177,5 @@ export {
   SpanGroup,
   DivGroup,
   MenuItemDiv,
+  AdditionDiv,
 };
