@@ -1,15 +1,6 @@
 import styled from '@emotion/styled';
 
-const Title = styled.h2`
-  font-weight: bold;
-  font-size: 24px;
-  color: rgb(51, 51, 51);
-  border-bottom: 2px solid rgb(51, 51, 51);
-  padding: 20px 0;
-  letter-spacing: -0.5px;
-`;
 const OrderRow = styled.div`
-  padding: 16px 20px;
   margin-bottom: 14px;
 
   & + & {
@@ -46,8 +37,7 @@ const OrderProductName = styled.h4`
   padding-bottom: 2px;
   letter-spacing: -0.22px;
 `;
-const OrderOption = styled.p`
-  margin-bottom: 8px;
+const OrderOption = styled.span`
   line-height: 1.43;
   color: rgb(153, 153, 153);
 `;
@@ -57,6 +47,7 @@ const OrderFlex = styled.div`
 `;
 const OrderQuantity = styled.span`
   letter-spacing: -0.22px;
+  color: rgb(153, 153, 153);
   &:before {
     content: '';
     display: inline-block;
@@ -66,10 +57,11 @@ const OrderQuantity = styled.span`
     margin: 0 10px;
   }
 `;
-const OrderPrice = styled.span`
+const OrderPrice = styled.p`
   margin-right: 6px;
   font-weight: bold;
   line-height: 1.5;
+  margin-top: 8px;
 `;
 const OrderState = styled.div`
   width: 100px;
@@ -90,7 +82,6 @@ export {
   OrderQuantity,
   OrderPrice,
   OrderState,
-  Title,
   OrderDate,
   OrderItem,
   OrderFlex,

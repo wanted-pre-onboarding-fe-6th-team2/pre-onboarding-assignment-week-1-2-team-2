@@ -11,8 +11,8 @@ import {
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
-import productReducer from './slice/productSlice/productSlice';
-import orderReducer from './slice/orderSlice/orderSlice';
+import productReducer from '@/redux/productSlice/productSlice';
+import orderReducer from '@/redux/orderSlice/orderSlice';
 
 const rootReducer = combineReducers({
   product: productReducer,
