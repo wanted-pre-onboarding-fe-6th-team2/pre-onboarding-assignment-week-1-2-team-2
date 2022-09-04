@@ -16,7 +16,7 @@ const ProductList = ({ data, totalItemNumber }) => {
         </p>
       </Styled.StoreDescription>
       {data.map(item => {
-        return <ProductListItem key={`${item.id + item.Name}`} item={item} />;
+        return <ProductListItem key={`${item.id + item.name}`} item={item} />;
       })}
     </Styled.ProductList>
   );
