@@ -1,22 +1,10 @@
 import styled from '@emotion/styled';
 
 const ProductList = styled.ul`
-  display: grid;
-  grid-template-columns: repeat(4, 20vw);
-  justify-content: center;
-  position: relative;
-
-  & > div {
-    grid-column: 1 / 5;
-  }
-
-  @media all and (max-width: 1024px) {
-    grid-template-columns: repeat(2, 45vw);
-
-    & > div {
-      grid-column: 1 / 3;
-    }
-  }
+  display: flex;
+  flex-direction: column;
+  padding: 0 3em;
+  margin-bottom: 1.5em;
 `;
 
 const StoreDescription = styled.div`
@@ -42,13 +30,16 @@ const StoreDescription = styled.div`
   }
 
   & > p:last-child {
-    margin-top: 1em;
+    margin: 1em 0 0.5em 0.5em;
+    align-self: flex-start;
   }
 
   & span {
     font-weight: bold;
     color: rgb(65, 143, 34);
   }
+
+  border-bottom: 0.1em solid rgb(65, 143, 34);
 `;
 
 const Product = styled.li`
@@ -58,22 +49,18 @@ const Product = styled.li`
   padding: 0.5em;
   box-sizing: border-box;
   display: flex;
-  flex-direction: column;
-  gap: 0.25em;
+  flex-direction: row;
+  gap: 1.5em;
+
+  &:last-child {
+    border-bottom: 0.1em solid rgb(65, 143, 34);
+  }
 `;
 
 const ProductImageContainer = styled.div`
-  width: 100%;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   overflow: hidden;
-
-  @media all and (max-width: 1024px) {
-    height: 400px;
-  }
-
-  @media all and (max-width: 768px) {
-    height: 25vh;
-  }
 `;
 
 const ProductImage = styled.img`
@@ -82,9 +69,16 @@ const ProductImage = styled.img`
   object-fit: cover;
 
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition: transform 0.5s;
   }
+`;
+
+const ProductInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  gap: 0.5em;
 `;
 
 const ProductName = styled.h2`
@@ -92,6 +86,14 @@ const ProductName = styled.h2`
   margin-top: 0.5em;
   font-weight: bold;
   font-size: 1.2em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+`;
+
+const ProductDescription = styled.p`
+  width: 100%;
+  font-size: 0.9em;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -114,7 +116,6 @@ const ProductPrice = styled.p`
   color: #aaa;
   font-size: 1em;
   font-weight: bold;
-  margin-bottom: 0.5em;
 `;
 
 export {
@@ -123,7 +124,9 @@ export {
   Product,
   ProductImageContainer,
   ProductImage,
+  ProductInfo,
   ProductName,
+  ProductDescription,
   ProductDiscountRate,
   ProductPrice,
   ProductDiscountPrice,
