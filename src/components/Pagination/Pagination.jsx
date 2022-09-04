@@ -18,10 +18,14 @@ const Pagination = ({ data }) => {
 
   return (
     <Styled.PaginationSection>
+      <p>
+        FRUITTE STORE <span>{data.length}</span>
+      </p>
       <ItemList data={currentItems(data)} page={currentPage} />
       <PaginationButton
         itemsPerPage={itemsPerPage}
         totalItem={data.length}
+        page={currentPage}
         paginate={setCurrentPage}
       />
     </Styled.PaginationSection>

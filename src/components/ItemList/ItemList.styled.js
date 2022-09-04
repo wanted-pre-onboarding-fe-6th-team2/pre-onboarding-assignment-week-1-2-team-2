@@ -4,13 +4,6 @@ const ItemList = styled.ul`
   display: grid;
   grid-template-columns: repeat(3, 25vw);
   justify-content: center;
-  position: relative;
-
-  & > p {
-    position: absolute;
-    top: 7em;
-    left: 2.5em;
-  }
 
   & > div {
     grid-column: 1 / 4;
@@ -20,11 +13,13 @@ const ItemList = styled.ul`
     & > img {
       width: 2em;
       height: 2em;
+      margin-bottom: 0.5em;
     }
 
     & > h2 {
       font-size: 2em;
       font-weight: bold;
+      margin-bottom: 0.25em;
     }
   }
 
@@ -41,6 +36,10 @@ const ItemList = styled.ul`
 
     & > div {
       grid-column: 1;
+
+      & > h2 {
+        font-size: 1.5em;
+      }
     }
   }
 `;
@@ -77,6 +76,7 @@ const ItemImage = styled.img`
 `;
 
 const ItemName = styled.h2`
+  margin-top: 0.5em;
   font-weight: bold;
   font-size: 1.2em;
   overflow: hidden;
@@ -101,6 +101,7 @@ const ItemPrice = styled.p`
   color: #aaa;
   font-size: 1em;
   font-weight: bold;
+  margin-bottom: 0.5em;
 `;
 
 export {

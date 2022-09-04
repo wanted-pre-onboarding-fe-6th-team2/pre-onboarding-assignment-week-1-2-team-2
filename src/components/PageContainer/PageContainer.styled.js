@@ -1,11 +1,11 @@
 import styled from '@emotion/styled';
 
-const PageContainer = styled.section`
+const Container = styled.div`
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin: 0 auto;
+  padding: 160px 0px 80px;
+  min-height: calc(100vh - 200px);
+  box-sizing: border-box;
 `;
 
-export { PageContainer };
+export { Container };
