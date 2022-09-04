@@ -1,13 +1,13 @@
 import React from 'react';
 import * as Styled from '@/components/ItemList/ItemList.styled';
 
-const ItemItem = ({ item }) => {
+const ItemListItem = ({ item }) => {
   const { imageUrl, Name, price, discountRate } = item;
 
   return (
     <Styled.Item>
       <Styled.ItemImageContainer>
-        <Styled.ItemImage src={imageUrl} alt="추천 상품" />
+        <Styled.ItemImage src={imageUrl} alt="상품" />
       </Styled.ItemImageContainer>
       <Styled.ItemName>{Name}</Styled.ItemName>
       {discountRate === 0 ? (
@@ -25,4 +25,4 @@ const ItemItem = ({ item }) => {
   );
 };
 
-export default ItemItem;
+export default ItemListItem;

@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 const ItemList = styled.ul`
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
