@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import * as Styled from '@/components/ProductList/ProductList.styled';
 import likeIcon from '@/assets/svg/like.svg';
 import clickedLikeIcon from '@/assets/svg/clicked-like.svg';
-import { ROUTES } from '@/constants/route';
 
 const ItemListItem = ({ item }) => {
   const { imageUrl, name, description, price, discountRate, isLiked, id } = item;
@@ -21,7 +20,7 @@ const ItemListItem = ({ item }) => {
           <img src={likeIcon} alt="좋아요 클릭 전 아이콘" onClick={handleLikeButtonClick} />
         )}
       </Styled.ProductImageContainer>
-      <Styled.ProductInfo to={`${ROUTES.PRODUCTDETAIL}?productId=${id}`}>
+      <Styled.ProductInfo to={`product-detail/${id}`}>
         <Styled.ProductName>{name}</Styled.ProductName>
         <Styled.ProductDescription>{description}</Styled.ProductDescription>
         {discountRate === 0 ? (
