@@ -51,15 +51,13 @@ const ProductList = () => {
                 </td>
                 <td>{product.name}</td>
                 <td>
-                  {products.option !== undefined
-                    ? product.option.map(option => (
-                        <Styled.OptionContainer key={option.optionId}>
-                          <div>{option.optionName}</div>
-                          <div>{option.optionPrice}원</div>
-                          <div>{option.optionStock}개</div>
-                        </Styled.OptionContainer>
-                      ))
-                    : ''}
+                  {product.option.map(option => (
+                    <Styled.OptionContainer key={option.optionId}>
+                      <div>{option.optionName}</div>
+                      <div>{option.optionPrice}원</div>
+                      <div>{option.optionStock}개</div>
+                    </Styled.OptionContainer>
+                  ))}
                 </td>
                 <td>
                   <input
