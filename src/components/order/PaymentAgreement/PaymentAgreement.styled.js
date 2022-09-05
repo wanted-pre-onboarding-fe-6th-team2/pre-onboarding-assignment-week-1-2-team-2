@@ -31,6 +31,11 @@ const OrderButton = styled.button`
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
 `;
 
 export { PaymentAgreementSection, PaymentAgreementCheckbox, PaymentAgreementLabel, OrderButton };
