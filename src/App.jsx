@@ -7,7 +7,7 @@ import ProductDetail from '@/pages/ProductDetail/ProductDetail';
 import OrderList from '@/pages/MyPage/OrderList';
 import Order from '@/pages/Order/Order';
 import ProductRegisterPage from '@/pages/Admin/ProductRegisterPage';
-import ProductListPage from './pages/Admin/ProductListPage';
+import ProductListPage from '@/pages/Admin/ProductListPage';
 
 const App = () => (
   <div>
