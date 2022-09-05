@@ -6,6 +6,7 @@ const Footer = styled.footer`
   min-width: 1050px;
   background: #fff;
   border-top: 1px solid rgb(247, 247, 247);
+  z-index: 10;
 `;
 
 const Inner = styled.div`
