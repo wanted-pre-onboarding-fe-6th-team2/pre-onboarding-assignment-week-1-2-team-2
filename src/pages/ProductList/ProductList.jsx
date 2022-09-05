@@ -1,8 +1,8 @@
 import React from 'react';
 import Pagination from '@/components/common/Pagination/Pagination';
 import ProductList from '@/components/ProductList/ProductList';
-import { useSelector } from 'react-redux';
 import PageContainer from '@/components/common/page/PageContainer';
+import { useSelector } from 'react-redux';
 
 const Store = () => {
   const products = useSelector(state => state.product);

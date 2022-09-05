@@ -4,6 +4,7 @@ const ProductList = styled.ul`
   display: flex;
   flex-direction: column;
   padding: 0 3em;
+  margin-top: 2rem;
   margin-bottom: 1.5em;
 `;
 
