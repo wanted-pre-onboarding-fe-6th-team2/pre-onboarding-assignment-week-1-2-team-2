@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 const Container = styled.div`
-  width: 1200px;
+  width: 1050px;
   height: 580px;
   margin: 50px auto;
   background-color: #fff;
@@ -16,7 +16,7 @@ const Title = styled.h2`
 const TableHeader = styled.div`
   display: flex;
   align-items: center;
-  padding: 10px 50px;
+  padding: 10px;
 
   h4 {
     font-size: 18px;
@@ -29,7 +29,7 @@ const TableHeader = styled.div`
 `;
 
 const Table = styled.table`
-  width: 1100px;
+  width: 1050px;
   font-size: 0.9rem;
   border-spacing: 0;
   border-collapse: collapse;
