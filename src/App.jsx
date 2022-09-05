@@ -15,8 +15,10 @@ const App = () => (
     <Routes>
       <Route path={ROUTES.HOME} element={<ProductList />} />
       <Route path={ROUTES.PRODUCTLIST} element={<ProductList />} />
-      <Route path={ROUTES.PRODUCTDETAIL} element={<ProductDetail />} />
-      <Route path={ROUTES.ORDER} element={<Order />} />
+      <Route path={ROUTES.PRODUCTDETAIL} element={<ProductDetail />}>
+        <Route path={ROUTES.ORDER} element={<Order />} />
+      </Route>
+
       <Route path={ROUTES.ORDERLIST} element={<OrderList />} />
       <Route path={ROUTES.ADMIN} element={<ProductListPage />} />
       <Route path={ROUTES.ADMINREGISTER} element={<ProductRegisterPage />} />

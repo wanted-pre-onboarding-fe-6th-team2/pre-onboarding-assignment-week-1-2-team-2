@@ -1,5 +1,6 @@
+import ProductDetail from '@/components/ProductDetail/ProductDetail';
 import React from 'react';
 
-export default function ProductDetail() {
-  return <div>ProductDetail</div>;
+export default function ProductDetailPage() {
+  return <ProductDetail />;
 }
