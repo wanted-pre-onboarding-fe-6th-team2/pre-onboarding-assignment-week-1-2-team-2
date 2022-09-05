@@ -21,7 +21,6 @@ const PaymentAgreement = () => {
       <Styled.PaymentAgreementLabel htmlFor={PAYMENT_AGREEMENT}>
         (필수) 구매조건 확인 및 결제 진행에 동의
       </Styled.PaymentAgreementLabel>
-      {/* TODO: 정적 값을 제거하고 동적으로 값 주입 */}
       <Styled.OrderButton>
         {(totalOrderAmount + convertedShippingPrice).toLocaleString()}원 결제하기
       </Styled.OrderButton>
