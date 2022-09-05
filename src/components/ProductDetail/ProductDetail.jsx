@@ -16,7 +16,7 @@ const ProductDetail = () => {
   const [isShareModalOpened, setIsShareModalOpened] = useState(false);
   const [selectedItem, setSelectedItem] = useState(0);
   const [productListToBuy, setProductListToBuy] = useState([]);
-  const orderData = { ...productData, order: productListToBuy };
+  const orderData = { ...productData, option: productListToBuy };
   const [isBuyClicked, setIsBuyClicked] = useState(false);
   const copyModalRef = useRef([]);
   const navigate = useNavigate();
