@@ -1,7 +1,7 @@
 import React from 'react';
 import Pagination from '@/components/common/Pagination/Pagination';
 import ProductList from '@/components/ProductList/ProductList';
-import PageContainer from '@/components/common/PageContainer/PageContainer';
+import PageContainer from '@/components/common/page/PageContainer';
 import { useSelector } from 'react-redux';
 
 const Store = () => {

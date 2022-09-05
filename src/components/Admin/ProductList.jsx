@@ -2,6 +2,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import * as Styled from '@/components/Admin/ProductList.styled';
 import { productActions } from '@/redux/productSlice/productSlice';
+import { ROUTES } from '@/constants/route';
 
 const ProductList = () => {
   const dispatch = useDispatch();
@@ -21,7 +22,7 @@ const ProductList = () => {
       <Styled.Title>상품 관리</Styled.Title>
       <Styled.TableHeader>
         <h4>상품 목록</h4>
-        <Styled.Button onClick={() => navigate('/admin/addProduct')}>상품 등록</Styled.Button>
+        <Styled.Button onClick={() => navigate(ROUTES.ADMINREGISTER)}>상품 등록</Styled.Button>
       </Styled.TableHeader>
       <Styled.Table>
         <thead>
