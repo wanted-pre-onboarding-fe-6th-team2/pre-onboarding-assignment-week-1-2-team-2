@@ -9,7 +9,7 @@ const Store = () => {
   const filteredProducts = products.filter(item => item.isDisplay === true);
 
   return (
-    <PageContainer>
+    <PageContainer as="space">
       <Pagination data={filteredProducts}>
         <ProductList />
       </Pagination>
