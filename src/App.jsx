@@ -7,6 +7,7 @@ import ProductDetail from '@/pages/ProductDetail/ProductDetail';
 import OrderList from '@/pages/MyPage/OrderList';
 import Order from '@/pages/Order/Order';
 import ProductRegisterPage from '@/pages/Admin/ProductRegisterPage';
+import ProductListPage from './pages/Admin/ProductListPage';
 
 const App = () => (
   <div>
@@ -19,7 +20,8 @@ const App = () => (
       </Route>
 
       <Route path={ROUTES.ORDERLIST} element={<OrderList />} />
-      <Route path={ROUTES.ADMIN} element={<ProductRegisterPage />} />
+      <Route path={ROUTES.ADMIN} element={<ProductListPage />} />
+      <Route path={ROUTES.ADMINREGISTER} element={<ProductRegisterPage />} />
       <Route path={'*'} element={<Navigate to="/"></Navigate>} />
     </Routes>
   </div>
