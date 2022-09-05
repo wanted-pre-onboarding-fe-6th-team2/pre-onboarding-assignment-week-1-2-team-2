@@ -3,9 +3,8 @@ export const initialState = [
     id: 1,
     imageUrl: 'https://cdn.imweb.me/thumbnail/20200715/53fa50226803f.jpg',
     name: '거창 오가네체리자두 3kg 한 상자',
-    description:
-      '다양한 사탕을 만나보세요!\n 입안에 가득 퍼지는 과일향!\n 한번 맛보면 헤어나올 수 없습니다.',
-    origin: '전라남도 완도',
+    description: '거창 오가네체리자두\n * 3kg 한상자 (50개 내외)\n',
+    origin: '대한민국',
     shipping: {
       shippingPrice: '무료 배송',
       shippingBasis: 3000,
@@ -13,18 +12,12 @@ export const initialState = [
     option: [
       {
         optionId: 1,
-        optionName: '초코맛 50g',
-        optionPrice: 300,
-        optionStock: 10,
-      },
-      {
-        optionId: 2,
-        optionName: '딸기맛 55g',
-        optionPrice: 200,
-        optionStock: 5,
+        optionName: '한상자 3kg',
+        optionPrice: 29000,
+        optionStock: 500,
       },
     ],
-    price: 100,
+    price: 29000,
     discountRate: 15,
     isDisplay: true,
     isLiked: false,
@@ -146,9 +139,8 @@ export const initialState = [
     id: 6,
     imageUrl: 'https://cdn.imweb.me/thumbnail/20200715/53fa50226803f.jpg',
     name: '거창 오가네체리자두 3kg 한 상자',
-    description:
-      '다양한 사탕을 만나보세요!\n 입안에 가득 퍼지는 과일향!\n 한번 맛보면 헤어나올 수 없습니다.',
-    origin: '전라남도 완도',
+    description: '거창 오가네체리자두\n * 3kg 한상자 (50개 내외)\n',
+    origin: '대한민국',
     shipping: {
       shippingPrice: '무료 배송',
       shippingBasis: 3000,
@@ -156,18 +148,12 @@ export const initialState = [
     option: [
       {
         optionId: 1,
-        optionName: '초코맛 50g',
-        optionPrice: 300,
-        optionStock: 10,
-      },
-      {
-        optionId: 2,
-        optionName: '딸기맛 55g',
-        optionPrice: 200,
-        optionStock: 5,
+        optionName: '한상자 3kg',
+        optionPrice: 29000,
+        optionStock: 500,
       },
     ],
-    price: 100,
+    price: 29000,
     discountRate: 15,
     isDisplay: true,
     isLiked: false,
@@ -289,9 +275,8 @@ export const initialState = [
     id: 11,
     imageUrl: 'https://cdn.imweb.me/thumbnail/20200715/53fa50226803f.jpg',
     name: '거창 오가네체리자두 3kg 한 상자',
-    description:
-      '다양한 사탕을 만나보세요!\n 입안에 가득 퍼지는 과일향!\n 한번 맛보면 헤어나올 수 없습니다.',
-    origin: '전라남도 완도',
+    description: '거창 오가네체리자두\n * 3kg 한상자 (50개 내외)\n',
+    origin: '대한민국',
     shipping: {
       shippingPrice: '무료 배송',
       shippingBasis: 3000,
@@ -299,18 +284,12 @@ export const initialState = [
     option: [
       {
         optionId: 1,
-        optionName: '초코맛 50g',
-        optionPrice: 300,
-        optionStock: 10,
-      },
-      {
-        optionId: 2,
-        optionName: '딸기맛 55g',
-        optionPrice: 200,
-        optionStock: 5,
+        optionName: '한상자 3kg',
+        optionPrice: 29000,
+        optionStock: 500,
       },
     ],
-    price: 100,
+    price: 29000,
     discountRate: 15,
     isDisplay: true,
     isLiked: false,
@@ -432,9 +411,8 @@ export const initialState = [
     id: 16,
     imageUrl: 'https://cdn.imweb.me/thumbnail/20200715/53fa50226803f.jpg',
     name: '거창 오가네체리자두 3kg 한 상자',
-    description:
-      '다양한 사탕을 만나보세요!\n 입안에 가득 퍼지는 과일향!\n 한번 맛보면 헤어나올 수 없습니다.',
-    origin: '전라남도 완도',
+    description: '거창 오가네체리자두\n * 3kg 한상자 (50개 내외)\n',
+    origin: '대한민국',
     shipping: {
       shippingPrice: '무료 배송',
       shippingBasis: 3000,
@@ -442,18 +420,12 @@ export const initialState = [
     option: [
       {
         optionId: 1,
-        optionName: '초코맛 50g',
-        optionPrice: 300,
-        optionStock: 10,
-      },
-      {
-        optionId: 2,
-        optionName: '딸기맛 55g',
-        optionPrice: 200,
-        optionStock: 5,
+        optionName: '한상자 3kg',
+        optionPrice: 29000,
+        optionStock: 500,
       },
     ],
-    price: 100,
+    price: 29000,
     discountRate: 15,
     isDisplay: true,
     isLiked: false,
@@ -568,9 +540,8 @@ export const initialState = [
     id: 21,
     imageUrl: 'https://cdn.imweb.me/thumbnail/20200715/53fa50226803f.jpg',
     name: '거창 오가네체리자두 3kg 한 상자',
-    description:
-      '다양한 사탕을 만나보세요!\n 입안에 가득 퍼지는 과일향!\n 한번 맛보면 헤어나올 수 없습니다.',
-    origin: '전라남도 완도',
+    description: '거창 오가네체리자두\n * 3kg 한상자 (50개 내외)\n',
+    origin: '대한민국',
     shipping: {
       shippingPrice: '무료 배송',
       shippingBasis: 3000,
@@ -578,18 +549,12 @@ export const initialState = [
     option: [
       {
         optionId: 1,
-        optionName: '초코맛 50g',
-        optionPrice: 300,
-        optionStock: 10,
-      },
-      {
-        optionId: 2,
-        optionName: '딸기맛 55g',
-        optionPrice: 200,
-        optionStock: 5,
+        optionName: '한상자 3kg',
+        optionPrice: 29000,
+        optionStock: 500,
       },
     ],
-    price: 100,
+    price: 29000,
     discountRate: 15,
     isDisplay: true,
     isLiked: false,
@@ -711,9 +676,8 @@ export const initialState = [
     id: 26,
     imageUrl: 'https://cdn.imweb.me/thumbnail/20200715/53fa50226803f.jpg',
     name: '거창 오가네체리자두 3kg 한 상자',
-    description:
-      '다양한 사탕을 만나보세요!\n 입안에 가득 퍼지는 과일향!\n 한번 맛보면 헤어나올 수 없습니다.',
-    origin: '전라남도 완도',
+    description: '거창 오가네체리자두\n * 3kg 한상자 (50개 내외)\n',
+    origin: '대한민국',
     shipping: {
       shippingPrice: '무료 배송',
       shippingBasis: 3000,
@@ -721,18 +685,12 @@ export const initialState = [
     option: [
       {
         optionId: 1,
-        optionName: '초코맛 50g',
-        optionPrice: 300,
-        optionStock: 10,
-      },
-      {
-        optionId: 2,
-        optionName: '딸기맛 55g',
-        optionPrice: 200,
-        optionStock: 5,
+        optionName: '한상자 3kg',
+        optionPrice: 29000,
+        optionStock: 500,
       },
     ],
-    price: 100,
+    price: 29000,
     discountRate: 15,
     isDisplay: true,
     isLiked: false,
