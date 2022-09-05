@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import * as Styled from '@/components/myPage/orderItem/OrderItem.styled';
+import * as Styled from '@/components/myPage/OrderItem/OrderItem.styled';
 import { useSelector } from 'react-redux';
 
 export default function OrderItem({ orderNumber, productId, option }) {
