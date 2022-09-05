@@ -6,16 +6,49 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepare": "husky install",
+    "lint:code": "eslint --ext .js,.jsx",
+    "lint:code-fix": "eslint --fix --ext .js,.jsx",
+    "prettier:code-fix": "prettier --write"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@mui/material": "^5.10.3",
+    "@reduxjs/toolkit": "^1.8.5",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-daum-postcode": "^3.1.1",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.0.2",
+    "react-router-dom": "^6.3.0",
+    "redux": "^4.2.0",
+    "redux-persist": "^6.0.0",
+    "redux-toolkit": "^1.1.2"
   },
   "devDependencies": {
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "@vitejs/plugin-react": "^2.0.1",
+    "eslint": "^8.23.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-prefer-arrow": "^1.2.3",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
     "vite": "^3.0.7"
+  },
+  "lint-staged": {
+    "*.json": [
+      "yarn prettier:code-fix"
+    ],
+    ".*rc": [
+      "yarn prettier:code-fix"
+    ],
+    "*.{js,jsx}": [
+      "yarn lint:code-fix --cache"
+    ]
   }
 }

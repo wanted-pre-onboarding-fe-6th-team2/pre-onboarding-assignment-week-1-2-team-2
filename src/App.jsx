@@ -1,34 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { Global } from '@emotion/react';
+import resetCss from '@/styles/reset';
+import { Navigate, Route, Routes } from 'react-router-dom';
+import { ROUTES } from '@/constants/route';
+import ProductList from '@/pages/ProductList/ProductList';
+import ProductDetail from '@/pages/ProductDetail/ProductDetail';
+import OrderList from '@/pages/MyPage/OrderList';
+import Order from '@/pages/Order/Order';
+import ProductRegisterPage from '@/pages/Admin/ProductRegisterPage';
+import ProductListPage from '@/pages/Admin/ProductListPage';
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => (
+  <div>
+    <Global styles={resetCss} />
+    <Routes>
+      <Route path={ROUTES.HOME} element={<ProductList />} />
+      <Route path={ROUTES.PRODUCTLIST} element={<ProductList />} />
+      <Route path={ROUTES.PRODUCTDETAIL} element={<ProductDetail />}>
+        <Route path={ROUTES.ORDER} element={<Order />} />
+      </Route>
 
-  return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
-}
+      <Route path={ROUTES.ORDERLIST} element={<OrderList />} />
+      <Route path={ROUTES.ADMIN} element={<ProductListPage />} />
+      <Route path={ROUTES.ADMINREGISTER} element={<ProductRegisterPage />} />
+      <Route path={'*'} element={<Navigate to="/"></Navigate>} />
+    </Routes>
+  </div>
+);
 
-export default App
+export default App;
