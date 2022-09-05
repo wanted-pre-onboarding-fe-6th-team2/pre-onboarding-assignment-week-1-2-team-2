@@ -98,6 +98,10 @@ const ProductDetail = () => {
     }
   };
 
+  // 주문페이지에서 뒤로가기 했을 경우, 상품 상세페이지 상태 관리
+  if (window.location.pathname === `/product-detail/${productId}` && isBuyClicked)
+    setIsBuyClicked(false);
+
   useEffect(() => {
     document.addEventListener('mousedown', handleClickOutside);
 
