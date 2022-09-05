@@ -7,6 +7,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import { useEffect, useState, useRef } from 'react';
 import { useSelector } from 'react-redux';
+import { Outlet, useNavigate } from 'react-router-dom';
 
 const ProductDetail = () => {
   const productData = useSelector(state => state.product)[0];
@@ -15,7 +16,10 @@ const ProductDetail = () => {
   const [isShareModalOpened, setIsShareModalOpened] = useState(false);
   const [selectedItem, setSelectedItem] = useState(0);
   const [productListToBuy, setProductListToBuy] = useState([]);
+  const orderData = { ...productData, order: productListToBuy };
+  const [isBuyClicked, setIsBuyClicked] = useState(false);
   const copyModalRef = useRef([]);
+  const navigate = useNavigate();
   const handleClickLike = () => setIsLikeClicked(prev => !prev);
   const handleCopyUrl = async e => {
     await copyModalRef.current[1].select();
@@ -67,10 +71,15 @@ const ProductDetail = () => {
     );
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (productListToBuy.length === 0) {
       alert('상품 옵션을 선택해주세요.');
-    } else alert('주문페이지로 이동합니다.');
+    } else {
+      console.log(orderData);
+      await alert('주문페이지로 이동합니다.');
+      await setIsBuyClicked(prev => !prev);
+      await navigate('/product-detail/order');
+    }
   };
 
   const additionalShippingDescription = () => {
@@ -95,124 +104,132 @@ const ProductDetail = () => {
   });
 
   return (
-    <Styled.Container>
-      <img width={450} height={550} src={imageUrl} alt="상품 이미지" />
+    <>
+      {!isBuyClicked && (
+        <Styled.Container>
+          <img width={450} height={550} src={imageUrl} alt="상품 이미지" />
 
-      <Styled.Div>
-        <div>
-          <Styled.DivWrap>
-            <Styled.H2>{name}</Styled.H2>
+          <Styled.Div>
             <div>
-              <img
-                ref={el => (copyModalRef.current[0] = el)}
-                src={shareIcon}
-                alt="공유 아이콘"
-                onClick={() => setIsShareModalOpened(prev => !prev)}
-              />
-            </div>
-            {isShareModalOpened && (
-              <Styled.Modal>
+              <Styled.DivWrap>
+                <Styled.H2>{name}</Styled.H2>
                 <div>
-                  <input ref={el => (copyModalRef.current[1] = el)} value={window.location.href} />
-                  <button ref={el => (copyModalRef.current[2] = el)} onClick={handleCopyUrl}>
-                    URL 복사
-                  </button>
+                  <img
+                    ref={el => (copyModalRef.current[0] = el)}
+                    src={shareIcon}
+                    alt="공유 아이콘"
+                    onClick={() => setIsShareModalOpened(prev => !prev)}
+                  />
                 </div>
-              </Styled.Modal>
-            )}
-          </Styled.DivWrap>
-          <Styled.Description>{description}</Styled.Description>
-          <Styled.PriceDiv>
-            <span>{handleFormatPrice(price)}</span>
-            <span>원</span>
-          </Styled.PriceDiv>
-          <Styled.Dl>
-            <dt>원산지</dt>
-            <dd>{origin}</dd>
-          </Styled.Dl>
-          <Styled.Dl>
-            <dt>배송비</dt>
-            <dd>{shipping.shippingPrice}</dd>
-          </Styled.Dl>
-          <Styled.Dl>
-            <dt>배송 안내</dt>
-            <dd>{shipping.shippingBasis}원 이상 구매시 무료배송</dd>
-          </Styled.Dl>
-          <Styled.Dl>
-            <dt style={{ margin: 'auto 0' }}>상품 선택</dt>
-            <FormControl sx={{ m: 1, minWidth: 300 }} size="small" style={{ margin: 0 }}>
-              <Styled.StyledSelect
-                value={selectedItem}
-                onChange={handleChangeSelectBox}
-                displayEmpty
-                inputProps={{ 'aria-label': 'Without label' }}
-                defaultValue={0}
-              >
-                <MenuItem style={{ display: 'none' }} value={0}>
-                  상품을 선택해주세요
-                </MenuItem>
-                {option.map(item => (
-                  <MenuItem key={`select-item-${item.optionId}`} value={item.optionName}>
-                    <Styled.MenuItemDiv>
-                      <div>{item.optionName}</div>
-                      <div>{handleFormatPrice(item.optionPrice)}원</div>
-                    </Styled.MenuItemDiv>
-                  </MenuItem>
-                ))}
-              </Styled.StyledSelect>
-            </FormControl>
-          </Styled.Dl>
-          {productListToBuy.length > 0 &&
-            productListToBuy.map((item, idx) => (
-              <Styled.DivGroup key={`product-${idx + 1}`}>
-                <div>
-                  <span>{item.optionName}</span>
-                  <button
-                    className="close-btn"
-                    onClick={handleCloseOptionBox}
-                    value={item.optionName}
+                {isShareModalOpened && (
+                  <Styled.Modal>
+                    <div>
+                      <input
+                        ref={el => (copyModalRef.current[1] = el)}
+                        value={window.location.href}
+                      />
+                      <button ref={el => (copyModalRef.current[2] = el)} onClick={handleCopyUrl}>
+                        URL 복사
+                      </button>
+                    </div>
+                  </Styled.Modal>
+                )}
+              </Styled.DivWrap>
+              <Styled.Description>{description}</Styled.Description>
+              <Styled.PriceDiv>
+                <span>{handleFormatPrice(price)}</span>
+                <span>원</span>
+              </Styled.PriceDiv>
+              <Styled.Dl>
+                <dt>원산지</dt>
+                <dd>{origin}</dd>
+              </Styled.Dl>
+              <Styled.Dl>
+                <dt>배송비</dt>
+                <dd>{shipping.shippingPrice}</dd>
+              </Styled.Dl>
+              <Styled.Dl>
+                <dt>배송 안내</dt>
+                <dd>{shipping.shippingBasis}원 이상 구매시 무료배송</dd>
+              </Styled.Dl>
+              <Styled.Dl>
+                <dt style={{ margin: 'auto 0' }}>상품 선택</dt>
+                <FormControl sx={{ m: 1, minWidth: 300 }} size="small" style={{ margin: 0 }}>
+                  <Styled.StyledSelect
+                    value={selectedItem}
+                    onChange={handleChangeSelectBox}
+                    displayEmpty
+                    inputProps={{ 'aria-label': 'Without label' }}
+                    defaultValue={0}
                   >
-                    <img src={closeIcon} alt="상품 옵션 삭제 아이콘" />
-                  </button>
-                </div>
-                <div className="detail">
-                  <div className="btn-group">
-                    <button
-                      disabled={item.quantity === 1 ? true : false}
-                      onClick={handleCalculateNum}
-                      value={item.optionName}
-                    >
-                      -
-                    </button>
-                    <div>{item.quantity}</div>
-                    <button onClick={handleCalculateNum} value={item.optionName}>
-                      +
-                    </button>
-                  </div>
-                  <div>{handleFormatPrice(item.optionPrice)}원</div>
-                </div>
-              </Styled.DivGroup>
-            ))}
-        </div>
-        <div>
-          <Styled.SpanGroup>
-            <span>총 상품 가격:</span>
-            <span>{handleFormatPrice(totalPrice())}</span>
-            <span>원</span>
-          </Styled.SpanGroup>
-          <Styled.AdditionDiv>{additionalShippingDescription()}</Styled.AdditionDiv>
-          <Styled.ButtonGroup>
-            {isLikeClicked ? (
-              <img src={clickedLikeIcon} alt="좋아요 클릭한 아이콘" onClick={handleClickLike} />
-            ) : (
-              <img src={likeIcon} alt="좋아요 클릭 전 아이콘" onClick={handleClickLike} />
-            )}
-            <button onClick={handleSubmit}>구매하기</button>
-            <button>장바구니</button>
-          </Styled.ButtonGroup>
-        </div>
-      </Styled.Div>
-    </Styled.Container>
+                    <MenuItem style={{ display: 'none' }} value={0}>
+                      상품을 선택해주세요
+                    </MenuItem>
+                    {option.map(item => (
+                      <MenuItem key={`select-item-${item.optionId}`} value={item.optionName}>
+                        <Styled.MenuItemDiv>
+                          <div>{item.optionName}</div>
+                          <div>{handleFormatPrice(item.optionPrice)}원</div>
+                        </Styled.MenuItemDiv>
+                      </MenuItem>
+                    ))}
+                  </Styled.StyledSelect>
+                </FormControl>
+              </Styled.Dl>
+              {productListToBuy.length > 0 &&
+                productListToBuy.map((item, idx) => (
+                  <Styled.DivGroup key={`product-${idx + 1}`}>
+                    <div>
+                      <span>{item.optionName}</span>
+                      <button
+                        className="close-btn"
+                        onClick={handleCloseOptionBox}
+                        value={item.optionName}
+                      >
+                        <img src={closeIcon} alt="상품 옵션 삭제 아이콘" />
+                      </button>
+                    </div>
+                    <div className="detail">
+                      <div className="btn-group">
+                        <button
+                          disabled={item.quantity === 1 ? true : false}
+                          onClick={handleCalculateNum}
+                          value={item.optionName}
+                        >
+                          -
+                        </button>
+                        <div>{item.quantity}</div>
+                        <button onClick={handleCalculateNum} value={item.optionName}>
+                          +
+                        </button>
+                      </div>
+                      <div>{handleFormatPrice(item.optionPrice)}원</div>
+                    </div>
+                  </Styled.DivGroup>
+                ))}
+            </div>
+            <div>
+              <Styled.SpanGroup>
+                <span>총 상품 가격:</span>
+                <span>{handleFormatPrice(totalPrice())}</span>
+                <span>원</span>
+              </Styled.SpanGroup>
+              <Styled.AdditionDiv>{additionalShippingDescription()}</Styled.AdditionDiv>
+              <Styled.ButtonGroup>
+                {isLikeClicked ? (
+                  <img src={clickedLikeIcon} alt="좋아요 클릭한 아이콘" onClick={handleClickLike} />
+                ) : (
+                  <img src={likeIcon} alt="좋아요 클릭 전 아이콘" onClick={handleClickLike} />
+                )}
+                <button onClick={handleSubmit}>구매하기</button>
+                <button>장바구니</button>
+              </Styled.ButtonGroup>
+            </div>
+          </Styled.Div>
+        </Styled.Container>
+      )}
+      <Outlet context={{ orderData }} />
+    </>
   );
 };
 
