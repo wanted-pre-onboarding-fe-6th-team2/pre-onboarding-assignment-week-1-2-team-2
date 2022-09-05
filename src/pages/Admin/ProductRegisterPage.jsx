@@ -4,3 +4,4 @@ import ProductRegister from '@/components/Admin/Register';
 const ProductRegisterPage = () => <ProductRegister />;
 
 export default ProductRegisterPage;
+
