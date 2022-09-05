@@ -1,5 +1,5 @@
 import ProductList from '@/components/Admin/ProductList';
-import PageContainer from '@/components/common/page/PageContainer';
+import PageContainer from '@/components/common/PageContainer/PageContainer';
 
 const ProductListPage = () => (
   <PageContainer>

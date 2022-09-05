@@ -8,6 +8,7 @@ import FormControl from '@mui/material/FormControl';
 import { useEffect, useState, useRef } from 'react';
 import { useSelector } from 'react-redux';
 import { Outlet, useNavigate } from 'react-router-dom';
+import { ROUTES } from '@/constants/route';
 
 const ProductDetail = () => {
   const productData = useSelector(state => state.product)[0];
@@ -23,31 +24,31 @@ const ProductDetail = () => {
   const handleClickLike = () => setIsLikeClicked(prev => !prev);
   const handleCopyUrl = async e => {
     await copyModalRef.current[1].select();
-    await document.execCommand('copy');
+    document.execCommand('copy');
     await e.target.focus();
-    await alert('링크가 복사되었습니다');
-    await setIsShareModalOpened(prev => !prev);
+    alert('링크가 복사되었습니다');
+    setIsShareModalOpened(prev => !prev);
   };
 
   const handleFormatPrice = price => price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
-  const handleChangeSelectBox = async e => {
-    await setSelectedItem(e.target.value);
+  const handleChangeSelectBox = e => {
+    setSelectedItem(e.target.value);
     if (productListToBuy.map(item => item.optionName).includes(e.target.value))
-      await alert('이미 추가된 옵션입니다.');
+      alert('이미 추가된 옵션입니다.');
     else {
       const copied = [...productListToBuy];
       const copiedItem = option.filter(item => item.optionName === e.target.value)[0];
-      await copied.push({ ...copiedItem, quantity: 1 });
-      await setProductListToBuy(copied);
+      copied.push({ ...copiedItem, quantity: 1 });
+      setProductListToBuy(copied);
     }
-    await setSelectedItem(0);
+    setSelectedItem(0);
   };
 
-  const handleCloseOptionBox = async e => {
+  const handleCloseOptionBox = e => {
     let copiedList = [...productListToBuy];
-    copiedList = await copiedList.filter(item => item.optionName !== e.currentTarget.value);
-    await setProductListToBuy(copiedList);
+    copiedList = copiedList.filter(item => item.optionName !== e.currentTarget.value);
+    setProductListToBuy(copiedList);
   };
 
   const totalPrice = () => {
@@ -58,7 +59,7 @@ const ProductDetail = () => {
     }
   };
 
-  const handleCalculateNum = async e => {
+  const handleCalculateNum = e => {
     const copiedList = [...productListToBuy];
     let updatedData = copiedList.filter(item => item.optionName === e.currentTarget.value)[0];
     if (e.target.textContent === '+') {
@@ -66,19 +67,17 @@ const ProductDetail = () => {
     } else {
       updatedData = { ...updatedData, quantity: updatedData.quantity - 1 };
     }
-    await setProductListToBuy(
+    setProductListToBuy(
       copiedList.map(item => (item.optionName === updatedData.optionName ? updatedData : item))
     );
   };
 
-  const handleSubmit = async () => {
+  const handleSubmit = () => {
     if (productListToBuy.length === 0) {
       alert('상품 옵션을 선택해주세요.');
     } else {
-      console.log(orderData);
-      await alert('주문페이지로 이동합니다.');
-      await setIsBuyClicked(prev => !prev);
-      await navigate('/product-detail/order');
+      setIsBuyClicked(prev => !prev);
+      navigate(`${ROUTES.PRODUCTDETAIL}/${ROUTES.ORDER}`);
     }
   };
 

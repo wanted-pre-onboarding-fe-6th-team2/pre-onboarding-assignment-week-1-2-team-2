@@ -1,5 +1,5 @@
 import React from 'react';
-import * as Styled from '@/components/common/header/Header.styled';
+import * as Styled from '@/components/common/Header/Header.styled';
 import fruitLogo from '@/assets/images/logo.jpg';
 import { Link } from 'react-router-dom';
 import { ROUTES } from '@/constants/route';
