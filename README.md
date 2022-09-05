@@ -14,37 +14,77 @@
 ## 폴더구조
 
 ```
-├── App.js
-├── api
-│ ├── auth.js
-│ ├── core.js
-│ └── todos.js
+├── App.jsx
+├── main.jsx
+├── assets
+│ ├── images
+│ └── svg
 ├── components
 │ ├── Admin
 │ │ ├── OptionList.jsx
+│ │ ├── ProductList.jsx
+│ │ ├── ProductList.styled.js
 │ │ ├── RegisterList.jsx
 │ │ ├── Register.jsx
 │ │ └── Register.styled.js
-│ └── TodoList.jsx
+│ ├── MyPage
+│ │ ├── OrderItem
+│ │ │ ├── OrderItem.jsx
+│ │ │ └── OrderItem.styled.js
+│ │ ├── OrderList
+│ │ │  ├── OrderListForm.jsx
+│ │ │  └── OrderListForm.styled.js
+│ ├ ├── ProductDetail
+│ │ ├── ProductDetail.jsx
+│ │ └── ProductDetail.styled.js
+│ ├── ProductList
+│ │ ├── ProductList.jsx
+│ │ ├── ProductList.styled.js
+│ │ └── ProductListItem.jsx
+│ ├── common
+│ │ ├── PageContainer
+│ │ │ ├── PageContainer.jsx
+│ │ │ └── PageContainer.styled.js
+│ │ ├── Pagination
+│ │ │ ├── Pagination.jsx
+│ │ │ ├── Pagination.styled.js
+│ │ │ └── PaginationButton.jsx
+│ │ ├── footer
+│ │ │ ├── Footer.jsx
+│ │ │ └── Footer.styled.js
+│ │ ├── header
+│ │ │ ├── Header.jsx
+│ │ │ └── Header.styled.js
+│ │ └── page
+│ │   ├── PageContainer.jsx
+│ │   └── PageContainer.styled.js
 ├── constants
-│ ├── .jsx
-│ └── .jsx
+│ └── route.js
 ├── main.jsx
 ├── pages
 │ ├── Admin
 │ │ ├── ProductListPage.jsx
 │ │ └── ProductRegisterPage.jsx
-│ └── Todos
+│ ├── Home
+│ │ └── Home.jsx
+| ├── Mypage
+│ │ └── OrderList.jsx
+| ├── Order
+│ │ └── Order.jsx
+| ├── ProductDetail
+│ │ └── ProductDetail.jsx
+| └── ProductList
+│   └── ProductList.jsx
 ├── styles
 │ └── reset.js
-└── redux
-  ├── orderSlice
-  │ ├── OptionList.jsx
-  │ ├── RegisterList.jsx
-  │ ├── Register.jsx
-  │ └── Register.styled.js
-  └── productSlice
-
+├── redux
+│ ├── orderSlice
+│ │ ├── initalState.js
+│ │ └── orderSlice.js
+│ ├── productSlice
+│ │ ├── initalState.js
+│ │ └── productSlice.js
+│ └── orderSlicestore.js
 ```
 
 ## 구현내용
@@ -53,51 +93,47 @@
 
 **개선점**
 
-
 **보완점**
-
 
 ### 사용자 기능/스토어 상품 상세 조회(`/`)
 
 **개선점**
 
-
 **보완점**
-
 
 ### 사용자 기능/스토어 상품 주문(`/`)
 
 **개선점**
 
-
 **보완점**
-
 
 ### 사용자 기능/스토어 상품 주문 내역 확인(`/`)
 
 **개선점**
 
-
 **보완점**
 
-
-### 관리자 기능/상품 목록 관리(`/`)
+### 관리자 기능/상품 목록 관리(`/order-list`)
 
 **개선점**
-
+옵션별 구매 개수가 확인 가능하도록 개선하였습니다.
+주문 정보와 제품 정보를 매칭시켜 노출될 수 있도록 구현하였습니다.
 
 **보완점**
-
+결제 관련 정보와 문의 글을 남길 수 있는 버튼을 리스트에 노출하여 사용자의 편리성을 높이면 좋을 것 같습니다.
+주문내역 필터 기능이 추가되면 편리할 것 같습니다.
 
 ### 관리자/상품 등록 (`/admin/register`)
 
 **개선점**
+
 - 기존에 존재하지 않았던 상품 등록 페이지를 작성하였습니다.
 - 자주 사용하는 form 유형은 컴포넌트화 하여 추후 등록 항목이 추가 되었을 때 빠르게 추가할 수 있도록 구현하였습니다.
 - 잦은 입력을 대비해 tab 키 만으로 빠르게 다음 form으로 도달할 수 있습니다.
 - 옵션을 여러개 추가할 수 있습니다.
 
 **보완점**
+
 - 옵션 추가 기능은 있으나 추후 옵션 삭제 버튼까지 추가하면 좋을 것 같습니다.
 - formData의 유효성 검사가 필요합니다.
 - 현재 데이터 전송 시 일부 데이터의 tracking이 되지 않고 있습니다. 태그 특성에 따른 상태 관리가 필요합니다.
