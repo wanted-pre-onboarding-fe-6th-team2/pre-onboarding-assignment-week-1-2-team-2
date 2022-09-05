@@ -77,14 +77,14 @@
 │   └── ProductList.jsx
 ├── styles
 │ └── reset.js
-├── redux
-│ ├── orderSlice
-│ │ ├── initalState.js
-│ │ └── orderSlice.js
-│ ├── productSlice
-│ │ ├── initalState.js
-│ │ └── productSlice.js
-│ └── orderSlicestore.js
+└── redux
+  ├── orderSlice
+  │ ├── initalState.js
+  │ └── orderSlice.js
+  ├── productSlice
+  │ ├── initalState.js
+  │ └── productSlice.js
+  └── orderSlicestore.js
 ```
 
 ## 구현내용
@@ -107,21 +107,23 @@
 
 **보완점**
 
-### 사용자 기능/스토어 상품 주문 내역 확인(`/`)
+### 사용자 기능/스토어 상품 주문 내역 확인(`/order-list`)
+
+**개선점**
+
+- 옵션별 구매 개수가 확인 가능하도록 개선하였습니다.
+- 주문 정보와 제품 정보를 매칭시켜 노출될 수 있도록 구현하였습니다.
+
+**보완점**
+
+- 결제 관련 정보와 문의 글을 남길 수 있는 버튼을 리스트에 노출하여 사용자의 편리성을 높이면 좋을 것 같습니다.
+- 주문내역 필터 기능이 추가되면 편리할 것 같습니다.
+
+### 관리자 기능/상품 목록 관리(`/`)
 
 **개선점**
 
 **보완점**
-
-### 관리자 기능/상품 목록 관리(`/order-list`)
-
-**개선점**
-옵션별 구매 개수가 확인 가능하도록 개선하였습니다.
-주문 정보와 제품 정보를 매칭시켜 노출될 수 있도록 구현하였습니다.
-
-**보완점**
-결제 관련 정보와 문의 글을 남길 수 있는 버튼을 리스트에 노출하여 사용자의 편리성을 높이면 좋을 것 같습니다.
-주문내역 필터 기능이 추가되면 편리할 것 같습니다.
 
 ### 관리자/상품 등록 (`/admin/register`)
 
