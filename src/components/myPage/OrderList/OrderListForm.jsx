@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import * as Styled from '@/components/myPage/orderList/OrderListForm.styled';
+import * as Styled from '@/components/myPage/OrderList/OrderListForm.styled';
 import OrderItem from '@/components/myPage/OrderItem/OrderItem';
 
 export default function OrderListForm() {
