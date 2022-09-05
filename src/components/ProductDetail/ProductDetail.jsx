@@ -11,7 +11,11 @@ import { Outlet, useNavigate } from 'react-router-dom';
 import { ROUTES } from '@/constants/route';
 
 const ProductDetail = () => {
-  const productData = useSelector(state => state.product)[0];
+  const params = new URLSearchParams(window.location.search);
+  const productId = params.get('productId');
+  const productData = useSelector(state => state.product).filter(
+    data => data.id === Number(productId)
+  )[0];
   const { imageUrl, name, description, price, origin, shipping, isLiked, option } = productData;
   const [isLikeClicked, setIsLikeClicked] = useState(isLiked);
   const [isShareModalOpened, setIsShareModalOpened] = useState(false);
