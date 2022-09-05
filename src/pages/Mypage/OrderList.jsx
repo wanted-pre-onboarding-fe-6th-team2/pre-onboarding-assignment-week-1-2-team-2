@@ -1,5 +1,5 @@
-import PageContainer from '@/components/common/page/PageContainer';
-import OrderListForm from '@/components/myPage/orderList/OrderListForm';
+import PageContainer from '@/components/common/Page/PageContainer';
+import OrderListForm from '@/components/myPage/OrderList/OrderListForm';
 import React from 'react';
 
 export default function OrderList() {
