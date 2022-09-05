@@ -7,7 +7,7 @@ const PageContainer = styled.main`
 `;
 
 const OrderPageHeading = styled.h2`
-  padding: 50px 0 48px;
+  padding: 0 0 48px;
   text-align: center;
   font-size: 28px;
   font-weight: 700;
