@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 const ProductList = styled.ul`
   display: flex;
   flex-direction: column;
-  padding: 0 3em;
+  padding: 2em 3em;
   margin-bottom: 1.5em;
 `;
 
