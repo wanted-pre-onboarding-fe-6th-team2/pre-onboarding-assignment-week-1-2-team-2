@@ -61,6 +61,14 @@ const ProductImageContainer = styled.div`
   width: 300px;
   height: 300px;
   overflow: hidden;
+  position: relative;
+
+  & > img:last-child {
+    z-index: 1000;
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+  }
 `;
 
 const ProductImage = styled.img`
