@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { Link } from 'react-router-dom';
 
 const ProductList = styled.ul`
   display: flex;
@@ -83,11 +84,13 @@ const ProductImage = styled.img`
   }
 `;
 
-const ProductInfo = styled.div`
+const ProductInfo = styled(Link)`
   display: flex;
   flex-direction: column;
   width: 70%;
   gap: 0.5em;
+  color: #000;
+  text-decoration: none;
 `;
 
 const ProductName = styled.h2`

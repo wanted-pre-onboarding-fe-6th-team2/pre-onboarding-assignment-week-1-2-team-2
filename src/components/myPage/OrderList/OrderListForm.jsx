@@ -1,7 +1,6 @@
-import React from 'react';
 import { useSelector } from 'react-redux';
 import * as Styled from '@/components/myPage/orderList/OrderListForm.styled';
-import OrderItem from '@/components/myPage/orderItem/OrderItem';
+import OrderItem from '@/components/myPage/OrderItem/OrderItem';
 
 export default function OrderListForm() {
   const orderList = useSelector(state => state.order);
