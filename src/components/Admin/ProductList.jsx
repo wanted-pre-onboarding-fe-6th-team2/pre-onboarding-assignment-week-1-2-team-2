@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import * as styled from '@/components/Admin/ProductList.styled';
+import * as Styled from '@/components/Admin/ProductList.styled';
+import { productActions } from '@/redux/productSlice/productSlice';
 
 const ProductList = () => {
   const dispatch = useDispatch();
@@ -8,21 +9,21 @@ const ProductList = () => {
   const products = useSelector(state => state.product);
 
   const handleChangeCheckBox = product => {
-    dispatch({ type: 'product/config', payload: { ...product, isDisplay: !product.isDisplay } });
+    dispatch(productActions.config({ ...product, isDisplay: !product.isDisplay }));
   };
 
   const handleDeleteProduct = productId => {
-    dispatch({ type: 'product/delete', payload: { deleteId: productId } });
+    dispatch(productActions.delete(productId));
   };
 
   return (
-    <styled.Container>
-      <styled.Title>상품 관리</styled.Title>
-      <styled.TableHeader>
+    <Styled.Container>
+      <Styled.Title>상품 관리</Styled.Title>
+      <Styled.TableHeader>
         <h4>상품 목록</h4>
-        <styled.Button onClick={() => navigate('/admin/addProduct')}>상품 등록</styled.Button>
-      </styled.TableHeader>
-      <styled.Table>
+        <Styled.Button onClick={() => navigate('/admin/addProduct')}>상품 등록</Styled.Button>
+      </Styled.TableHeader>
+      <Styled.Table>
         <thead>
           <tr>
             <th>목록</th>
@@ -30,11 +31,11 @@ const ProductList = () => {
             <th>상품명</th>
             <th>
               옵션
-              <styled.OptionContainer>
+              <Styled.OptionContainer>
                 <div>옵션명</div>
                 <div>가격</div>
                 <div>재고</div>
-              </styled.OptionContainer>
+              </Styled.OptionContainer>
             </th>
             <th>상품노출</th>
           </tr>
@@ -50,11 +51,11 @@ const ProductList = () => {
                 <td>{product.name}</td>
                 <td>
                   {product.option.map(option => (
-                    <styled.OptionContainer key={option.optionId}>
+                    <Styled.OptionContainer key={option.optionId}>
                       <div>{option.optionName}</div>
                       <div>{option.optionPrice}원</div>
                       <div>{option.optionStock}개</div>
-                    </styled.OptionContainer>
+                    </Styled.OptionContainer>
                   ))}
                 </td>
                 <td>
@@ -65,9 +66,9 @@ const ProductList = () => {
                   />
                 </td>
                 <td>
-                  <styled.DeleteButton onClick={() => handleDeleteProduct(product.id)}>
+                  <Styled.DeleteButton onClick={() => handleDeleteProduct(product.id)}>
                     Delete
-                  </styled.DeleteButton>
+                  </Styled.DeleteButton>
                 </td>
               </tr>
             ))
@@ -77,8 +78,8 @@ const ProductList = () => {
             </tr>
           )}
         </tbody>
-      </styled.Table>
-    </styled.Container>
+      </Styled.Table>
+    </Styled.Container>
   );
 };
 

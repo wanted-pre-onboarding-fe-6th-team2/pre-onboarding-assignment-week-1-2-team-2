@@ -9,7 +9,7 @@ const productSlice = createSlice({
       return [...state, payload];
     },
     delete: (state, { payload }) => {
-      const deleteId = payload.deleteId;
+      const deleteId = payload;
       const newState = state;
       const deleteIndex = newState.findIndex(product => product.id === deleteId);
 
