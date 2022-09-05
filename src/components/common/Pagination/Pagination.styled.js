@@ -21,6 +21,10 @@ const PaginationButton = styled.button`
   color: rgb(65, 143, 34);
   font-weight: bold;
   font-size: 1em;
+
+  &:disabled {
+    color: rgba(65, 143, 34, 0.2);
+  }
 `;
 
 export { PaginationSection, PaginationButtonContainer, PaginationButton };
