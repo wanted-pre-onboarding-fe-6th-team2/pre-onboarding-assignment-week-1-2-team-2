@@ -29,7 +29,7 @@ const ProductDetail = () => {
     await setIsShareModalOpened(prev => !prev);
   };
 
-  const handleFormatPrice = item => item.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  const handleFormatPrice = price => price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
   const handleChangeSelectBox = async e => {
     await setSelectedItem(e.target.value);
