@@ -64,7 +64,6 @@ const ProductImageContainer = styled.div`
   position: relative;
 
   & > img:last-child {
-    z-index: 1000;
     position: absolute;
     top: 0.5em;
     right: 0.5em;
