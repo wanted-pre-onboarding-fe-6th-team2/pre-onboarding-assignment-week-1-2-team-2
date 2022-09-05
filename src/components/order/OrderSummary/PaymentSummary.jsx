@@ -1,26 +1,15 @@
 import * as Styled from '@/components/order/OrderSummary/PaymentSummary.styled';
-
-const productListToBuy = {
-  id: 1,
-  name: '거창 오가네체리자두 3kg 한 상자',
-  imageUrl: 'https://cdn.imweb.me/thumbnail/20200715/53fa50226803f.jpg',
-  description: '',
-  discountRate: 15,
-  isDisPlay: true,
-  isLiked: false,
-  shipping: { shippingPrice: '무료 배송', shippingBasis: 3000 },
-  options: [
-    { optionId: 1, optionName: '초코맛 50g', optionPrice: 300, optionStock: 10, quantity: 3 },
-  ],
-};
+import { useOutletContext } from 'react-router-dom';
 
 const PaymentSummary = () => {
-  const totalOrderAmount = productListToBuy.options.reduce(
+  const { orderData } = useOutletContext();
+
+  const totalOrderAmount = orderData.option.reduce(
     (acc, { optionPrice, quantity }) => acc + optionPrice * quantity,
     0
   );
 
-  const { shippingPrice } = productListToBuy.shipping;
+  const { shippingPrice } = orderData.shipping;
 
   const convertedShippingPrice = typeof shippingPrice === 'string' ? 0 : shippingPrice;
 
