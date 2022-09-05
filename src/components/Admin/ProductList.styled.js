@@ -2,7 +2,6 @@ import styled from '@emotion/styled';
 
 const Container = styled.div`
   width: 1050px;
-  height: 580px;
   margin: 50px auto;
   background-color: #fff;
 `;
