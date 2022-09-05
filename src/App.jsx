@@ -1,15 +1,24 @@
 import { Global } from '@emotion/react';
 import resetCss from '@/styles/reset';
-import { Route, Routes } from 'react-router-dom';
-import Home from '@/pages/Home/Home';
+import { Navigate, Route, Routes } from 'react-router-dom';
+import { ROUTES } from '@/constants/route';
 import ProductList from '@/pages/ProductList/ProductList';
+import ProductDetail from '@/pages/ProductDetail/ProductDetail';
+import OrderList from '@/pages/MyPage/OrderList';
+import Order from '@/pages/Order/Order';
+import ProductRegisterPage from '@/pages/Admin/ProductRegisterPage';
 
 const App = () => (
   <div>
     <Global styles={resetCss} />
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/productList" element={<ProductList />} />
+      <Route path={ROUTES.HOME} element={<ProductList />} />
+      <Route path={ROUTES.PRODUCTLIST} element={<ProductList />} />
+      <Route path={ROUTES.PRODUCTDETAIL} element={<ProductDetail />} />
+      <Route path={ROUTES.ORDER} element={<Order />} />
+      <Route path={ROUTES.ORDERLIST} element={<OrderList />} />
+      <Route path={ROUTES.ADMIN} element={<ProductRegisterPage />} />
+      <Route path={'*'} element={<Navigate to="/"></Navigate>} />
     </Routes>
   </div>
 );
