@@ -66,7 +66,7 @@ const Modal = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 50px;
+  top: 210px;
   margin-left: 180px;
   background-color: white;
   box-shadow: 2px 2px 2px 2px rgb(181, 181, 181);

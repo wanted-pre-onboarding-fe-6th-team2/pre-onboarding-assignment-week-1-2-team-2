@@ -7,11 +7,15 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import { useEffect, useState, useRef } from 'react';
 import { useSelector } from 'react-redux';
-import { Outlet, useNavigate } from 'react-router-dom';
+import { Outlet, useNavigate, useParams } from 'react-router-dom';
 import { ROUTES } from '@/constants/route';
 
 const ProductDetail = () => {
-  const productData = useSelector(state => state.product)[0];
+  const params = useParams();
+  const productId = params.productId;
+  const productData = useSelector(state => state.product).filter(
+    data => data.id === Number(productId)
+  )[0];
   const { imageUrl, name, description, price, origin, shipping, isLiked, option } = productData;
   const [isLikeClicked, setIsLikeClicked] = useState(isLiked);
   const [isShareModalOpened, setIsShareModalOpened] = useState(false);
@@ -77,7 +81,7 @@ const ProductDetail = () => {
       alert('상품 옵션을 선택해주세요.');
     } else {
       setIsBuyClicked(prev => !prev);
-      navigate(`${ROUTES.PRODUCTDETAIL}/${ROUTES.ORDER}`);
+      navigate(`/product-detail/${productId}/${ROUTES.ORDER}`);
     }
   };
 

@@ -9,6 +9,7 @@ const Header = styled.header`
   min-width: 1050px;
   box-shadow: rgb(0 0 0 / 7%) 0px 3px 4px 0px;
   background: #fff;
+  z-index: 100;
 `;
 
 const Inner = styled.div`
