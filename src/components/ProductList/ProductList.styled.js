@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 const ProductList = styled.ul`
   display: flex;
   flex-direction: column;
-  padding: 0 3em;
+  padding: 2em 3em;
   margin-bottom: 1.5em;
 `;
 
@@ -64,7 +64,6 @@ const ProductImageContainer = styled.div`
   position: relative;
 
   & > img:last-child {
-    z-index: 1000;
     position: absolute;
     top: 0.5em;
     right: 0.5em;

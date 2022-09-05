@@ -4,6 +4,7 @@ const Header = styled.header`
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 5;
   width: 100%;
   text-align: center;
   min-width: 1050px;
