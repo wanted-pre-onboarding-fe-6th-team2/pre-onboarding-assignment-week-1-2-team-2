@@ -1,4 +1,4 @@
-import PageContainer from '@/components/common/Page/PageContainer';
+import PageContainer from '@/components/common/PageContainer/PageContainer';
 import OrderListForm from '@/components/myPage/OrderList/OrderListForm';
 import React from 'react';
 
