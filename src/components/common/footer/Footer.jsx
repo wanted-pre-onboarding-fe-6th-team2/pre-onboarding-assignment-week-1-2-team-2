@@ -1,5 +1,5 @@
 import React from 'react';
-import * as Styled from '@/components/common/footer/Footer.styled';
+import * as Styled from '@/components/common/Footer/Footer.styled';
 import { Link } from 'react-router-dom';
 import { ROUTES } from '@/constants/route';
 import imgBlog from '@/assets/images/ico_blog.png';

@@ -1,6 +1,6 @@
-import * as Styled from '@/components/common/page/PageContainer.styled';
-import Footer from '@/components/common/footer/Footer';
-import Header from '@/components/common/header/Header';
+import * as Styled from '@/components/common/PageContainer/PageContainer.styled';
+import Footer from '@/components/common/Footer/Footer';
+import Header from '@/components/common/Header/Header';
 const PageContainer = ({ children, as }) => {
   return (
     <>

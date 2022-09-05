@@ -1,4 +1,4 @@
-import PageContainer from '@/components/common/page/PageContainer';
+import PageContainer from '@/components/common/PageContainer/PageContainer';
 import ProductDetail from '@/components/ProductDetail/ProductDetail';
 import React from 'react';
 
