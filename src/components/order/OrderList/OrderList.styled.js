@@ -20,6 +20,10 @@ const ProductTitle = styled.span`
   font-weight: 500;
 `;
 
+const ProductOption = styled.span`
+  width: 150px;
+`;
+
 const ProductCount = styled.span`
   width: 100px;
 `;
@@ -29,4 +33,4 @@ const ProductPrice = styled.span`
   font-weight: 700;
 `;
 
-export { ProductListItem, ProductImage, ProductTitle, ProductCount, ProductPrice };
+export { ProductListItem, ProductImage, ProductTitle, ProductOption, ProductCount, ProductPrice };
