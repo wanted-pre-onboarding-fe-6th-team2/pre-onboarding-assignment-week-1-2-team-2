@@ -2,8 +2,7 @@ import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 
 const Container = styled.div`
-  width: 1200px;
-  height: 580px;
+  width: 1050px;
   margin: 50px auto;
   background-color: #fff;
 `;
