@@ -17,8 +17,8 @@ export default function Footer() {
         <div>
           <Styled.CsTitle>문의안내</Styled.CsTitle>
           <Styled.CsDesc>
-            카카오톡채널: 프루떼 <br />
-            (주중 9시~18시 채팅 상담 가능)
+            카카오톡채널: 프루떼
+            <span>(주중 9시~18시 채팅 상담 가능)</span>
           </Styled.CsDesc>
         </div>
         <div>

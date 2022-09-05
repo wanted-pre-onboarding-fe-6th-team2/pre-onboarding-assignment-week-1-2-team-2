@@ -30,6 +30,9 @@ const CsDesc = styled.p`
   color: rgb(153, 153, 153);
   font-size: 14px;
   line-height: 1.6;
+  span {
+    display: block;
+  }
 `;
 
 const CsInfo = styled.div`

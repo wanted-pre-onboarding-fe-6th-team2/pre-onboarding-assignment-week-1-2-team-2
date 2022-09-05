@@ -21,7 +21,7 @@ export default function OrderItem({ orderNumber, productId, option }) {
   // 금액 천단위(3자리) 콤마 처리
   const FormatTotalPrice = () => {
     const totalPrice = optionPrice.current.reduce((a, b) => a + b);
-    return totalPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    return Number(totalPrice).toLocaleString('en');
   };
 
   const formatOrderNumber = idx => {
