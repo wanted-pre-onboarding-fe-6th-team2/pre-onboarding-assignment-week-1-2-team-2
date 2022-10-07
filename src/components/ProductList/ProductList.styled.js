@@ -46,8 +46,6 @@ const StoreDescription = styled.div`
 
 const Product = styled.li`
   width: 100%;
-  height: 100%;
-  margin: 0 auto;
   padding: 0.5em;
   box-sizing: border-box;
   display: flex;
@@ -62,7 +60,6 @@ const Product = styled.li`
 const ProductImageContainer = styled.div`
   width: 300px;
   height: 300px;
-  overflow: hidden;
   position: relative;
 
   & > img:last-child {
@@ -74,12 +71,12 @@ const ProductImageContainer = styled.div`
 `;
 
 const ProductImage = styled.img`
-  width: 100%;
-  height: 100%;
+  height: 300px;
+  width: 300px;
   object-fit: cover;
 
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.025);
     transition: transform 0.5s;
   }
 `;
@@ -87,10 +84,13 @@ const ProductImage = styled.img`
 const ProductInfo = styled(Link)`
   display: flex;
   flex-direction: column;
-  width: 70%;
+
   gap: 0.5em;
   color: #000;
   text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 `;
 
 const ProductName = styled.h2`
@@ -98,17 +98,11 @@ const ProductName = styled.h2`
   margin-top: 0.5em;
   font-weight: bold;
   font-size: 1.2em;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 `;
 
 const ProductDescription = styled.p`
   width: 100%;
   font-size: 0.9em;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 `;
 
 const ProductDiscountRate = styled.span`
